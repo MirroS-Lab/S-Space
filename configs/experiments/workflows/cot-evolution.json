@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cot-evolution",
+  "classification": "quantitative",
+  "steps": [
+    {
+      "module": "sspace.experiments.spinbench.evolving_cot.scripts.run_qwen36_prefilled_cot_activations",
+      "args": [
+        "--mode",
+        "full"
+      ],
+      "model": "qwen36_27b"
+    },
+    {
+      "module": "sspace.experiments.spinbench.evolving_cot.scripts.score_prefilled_spinbench_cot_stages",
+      "args": [],
+      "model": "qwen36_27b"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "cot",
+        "--inputs",
+        "outputs/reproduction/cot_evolution/analysis/summary.json",
+        "--output-dir",
+        "outputs/reproduction/cot_evolution/plots"
+      ],
+      "model": "molmo2_er"
+    }
+  ]
+}

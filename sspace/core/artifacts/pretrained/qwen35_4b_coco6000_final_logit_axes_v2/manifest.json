@@ -1,0 +1,531 @@
+{
+  "artifact_id": "qwen35_4b_coco6000_final_logit_axes_v2",
+  "axis_order": [
+    "horizontal",
+    "vertical",
+    "distance"
+  ],
+  "construction": {
+    "attention_backend": "eager",
+    "axis_order": [
+      "horizontal",
+      "vertical",
+      "distance"
+    ],
+    "canonical_sum_order": "global_job_then_original_swapped_v1",
+    "cpu_threads": 1,
+    "cublas_workspace_config": ":4096:8",
+    "data_provenance_migration": {
+      "construction_rows_sha256": "b5082e8738b2abefe246961b50ea4662aee8d1e8b4dea273e01916703c49d0a5",
+      "protocol": "split_dataset_identity_migration_v1",
+      "source_construction_dataset_fingerprint": "487754bff7f986c5d73bc9a159237430b65bdf1caec7a9f8356aa8479bf1b5fd",
+      "source_construction_dataset_id": "coco_train2017_mask_depth_train6000_val300_v1",
+      "source_validation_dataset_fingerprint": "4e7bae31bcc6b937afffc1497e5355e3dfafd516d4ad02552b276d7910ecd283",
+      "source_validation_dataset_id": "coco_train2017_mask_depth_train6000_val1800_v2",
+      "validation_rows_sha256": "dc41e43ee8f36063050305cdc4e40284700c36ff9d748b57db8527e56ef92cb6"
+    },
+    "dataset_fingerprint": "d826f948bc3db36c0cecd965118a6fa96c53ac29d91e7bf84a3b2abc2099fe6f",
+    "dataset_id": "coco_train2017_mask_depth_train6000_v2",
+    "dataset_manifest_sha256": "54ccaffa2042df5dc71354ac5ff5682eb66745264d650f12fc8dfa6a2ff47f43",
+    "float32_matmul_precision": "highest",
+    "merged_evidence": {
+      "all_axis_margins": "[J,2,L_valid,3] float32",
+      "pair_centers": "[J,L_valid] float32",
+      "task_margins": "[J,2,L_valid] float32"
+    },
+    "model_source": "Hugging Face Qwen/Qwen3.5-4B snapshot; pinned revision and all Hub LFS blobs verified by the Hugging Face cache",
+    "object_role_order": [
+      "query",
+      "reference"
+    ],
+    "object_token_protocol": "last_overlapping_subtoken",
+    "orientation_batch_size": 1,
+    "orientations": [
+      "original",
+      "swapped"
+    ],
+    "prompt_set": "coco_spatial_relations_v2",
+    "prompt_styles": [
+      "baseline",
+      "direct",
+      "natural",
+      "choice_first",
+      "terse"
+    ],
+    "raw_worker_cache": {
+      "logit_contrasts": "[J_rank,2,3] float32",
+      "object_states": "[J_rank,2,L_model,2,D] float32",
+      "role_gradients": "[J_rank,2,L_model,D] float32"
+    },
+    "role_gradient": "(grad_query(z_g)-grad_reference(z_g))/2",
+    "run_kind": "full",
+    "sdp_kernel": "math",
+    "sharding_protocol": "global_sample_index_mod_world_size_v1",
+    "train_samples": 6000,
+    "validation": {
+      "dataset_fingerprint": "125146e175ddb8f688628caca0e4544e3049bc12a80fca2924d75b192e8b7c3d",
+      "dataset_id": "coco_train2017_mask_depth_validation1800_v2",
+      "decision_protocol": "margin_sign_v1",
+      "per_layer": [
+        {
+          "axis_accuracy": [
+            0.51,
+            0.6133333333333333,
+            0.455
+          ],
+          "correct": 947,
+          "layer_id": 0,
+          "overall_accuracy": 0.5261111111111111,
+          "total": 1800,
+          "worst_axis_accuracy": 0.455
+        },
+        {
+          "axis_accuracy": [
+            0.49333333333333335,
+            0.65,
+            0.43166666666666664
+          ],
+          "correct": 945,
+          "layer_id": 1,
+          "overall_accuracy": 0.525,
+          "total": 1800,
+          "worst_axis_accuracy": 0.43166666666666664
+        },
+        {
+          "axis_accuracy": [
+            0.505,
+            0.6816666666666666,
+            0.4483333333333333
+          ],
+          "correct": 981,
+          "layer_id": 2,
+          "overall_accuracy": 0.545,
+          "total": 1800,
+          "worst_axis_accuracy": 0.4483333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.5466666666666666,
+            0.7033333333333334,
+            0.44
+          ],
+          "correct": 1014,
+          "layer_id": 3,
+          "overall_accuracy": 0.5633333333333334,
+          "total": 1800,
+          "worst_axis_accuracy": 0.44
+        },
+        {
+          "axis_accuracy": [
+            0.5483333333333333,
+            0.6966666666666667,
+            0.46166666666666667
+          ],
+          "correct": 1024,
+          "layer_id": 4,
+          "overall_accuracy": 0.5688888888888889,
+          "total": 1800,
+          "worst_axis_accuracy": 0.46166666666666667
+        },
+        {
+          "axis_accuracy": [
+            0.56,
+            0.6633333333333333,
+            0.4666666666666667
+          ],
+          "correct": 1014,
+          "layer_id": 5,
+          "overall_accuracy": 0.5633333333333334,
+          "total": 1800,
+          "worst_axis_accuracy": 0.4666666666666667
+        },
+        {
+          "axis_accuracy": [
+            0.6016666666666667,
+            0.7133333333333334,
+            0.49
+          ],
+          "correct": 1083,
+          "layer_id": 6,
+          "overall_accuracy": 0.6016666666666667,
+          "total": 1800,
+          "worst_axis_accuracy": 0.49
+        },
+        {
+          "axis_accuracy": [
+            0.7783333333333333,
+            0.8716666666666667,
+            0.6683333333333333
+          ],
+          "correct": 1391,
+          "layer_id": 7,
+          "overall_accuracy": 0.7727777777777778,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6683333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.6166666666666667,
+            0.83,
+            0.675
+          ],
+          "correct": 1273,
+          "layer_id": 8,
+          "overall_accuracy": 0.7072222222222222,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6166666666666667
+        },
+        {
+          "axis_accuracy": [
+            0.5083333333333333,
+            0.795,
+            0.6666666666666666
+          ],
+          "correct": 1182,
+          "layer_id": 9,
+          "overall_accuracy": 0.6566666666666666,
+          "total": 1800,
+          "worst_axis_accuracy": 0.5083333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.7283333333333334,
+            0.8516666666666667,
+            0.6583333333333333
+          ],
+          "correct": 1343,
+          "layer_id": 10,
+          "overall_accuracy": 0.7461111111111111,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6583333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.9516666666666667,
+            0.9633333333333334,
+            0.7233333333333334
+          ],
+          "correct": 1583,
+          "layer_id": 11,
+          "overall_accuracy": 0.8794444444444445,
+          "total": 1800,
+          "worst_axis_accuracy": 0.7233333333333334
+        },
+        {
+          "axis_accuracy": [
+            0.855,
+            0.9516666666666667,
+            0.6516666666666666
+          ],
+          "correct": 1475,
+          "layer_id": 12,
+          "overall_accuracy": 0.8194444444444444,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6516666666666666
+        },
+        {
+          "axis_accuracy": [
+            0.7583333333333333,
+            0.9183333333333333,
+            0.675
+          ],
+          "correct": 1411,
+          "layer_id": 13,
+          "overall_accuracy": 0.7838888888888889,
+          "total": 1800,
+          "worst_axis_accuracy": 0.675
+        },
+        {
+          "axis_accuracy": [
+            0.8333333333333334,
+            0.9266666666666666,
+            0.6516666666666666
+          ],
+          "correct": 1447,
+          "layer_id": 14,
+          "overall_accuracy": 0.8038888888888889,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6516666666666666
+        },
+        {
+          "axis_accuracy": [
+            0.9833333333333333,
+            0.9616666666666667,
+            0.72
+          ],
+          "correct": 1599,
+          "layer_id": 15,
+          "overall_accuracy": 0.8883333333333333,
+          "total": 1800,
+          "worst_axis_accuracy": 0.72
+        },
+        {
+          "axis_accuracy": [
+            0.9833333333333333,
+            0.9583333333333334,
+            0.6116666666666667
+          ],
+          "correct": 1532,
+          "layer_id": 16,
+          "overall_accuracy": 0.8511111111111112,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6116666666666667
+        },
+        {
+          "axis_accuracy": [
+            0.9183333333333333,
+            0.9016666666666666,
+            0.66
+          ],
+          "correct": 1488,
+          "layer_id": 17,
+          "overall_accuracy": 0.8266666666666667,
+          "total": 1800,
+          "worst_axis_accuracy": 0.66
+        },
+        {
+          "axis_accuracy": [
+            0.9033333333333333,
+            0.885,
+            0.62
+          ],
+          "correct": 1445,
+          "layer_id": 18,
+          "overall_accuracy": 0.8027777777777778,
+          "total": 1800,
+          "worst_axis_accuracy": 0.62
+        },
+        {
+          "axis_accuracy": [
+            0.8366666666666667,
+            0.8733333333333333,
+            0.6383333333333333
+          ],
+          "correct": 1409,
+          "layer_id": 19,
+          "overall_accuracy": 0.7827777777777778,
+          "total": 1800,
+          "worst_axis_accuracy": 0.6383333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.38666666666666666,
+            0.45166666666666666,
+            0.53
+          ],
+          "correct": 821,
+          "layer_id": 20,
+          "overall_accuracy": 0.45611111111111113,
+          "total": 1800,
+          "worst_axis_accuracy": 0.38666666666666666
+        },
+        {
+          "axis_accuracy": [
+            0.37166666666666665,
+            0.43333333333333335,
+            0.5316666666666666
+          ],
+          "correct": 802,
+          "layer_id": 21,
+          "overall_accuracy": 0.44555555555555554,
+          "total": 1800,
+          "worst_axis_accuracy": 0.37166666666666665
+        },
+        {
+          "axis_accuracy": [
+            0.3933333333333333,
+            0.5033333333333333,
+            0.47333333333333333
+          ],
+          "correct": 822,
+          "layer_id": 22,
+          "overall_accuracy": 0.45666666666666667,
+          "total": 1800,
+          "worst_axis_accuracy": 0.3933333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.515,
+            0.495,
+            0.5116666666666667
+          ],
+          "correct": 913,
+          "layer_id": 23,
+          "overall_accuracy": 0.5072222222222222,
+          "total": 1800,
+          "worst_axis_accuracy": 0.495
+        },
+        {
+          "axis_accuracy": [
+            0.52,
+            0.515,
+            0.5133333333333333
+          ],
+          "correct": 929,
+          "layer_id": 24,
+          "overall_accuracy": 0.5161111111111111,
+          "total": 1800,
+          "worst_axis_accuracy": 0.5133333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.5016666666666667,
+            0.5116666666666667,
+            0.5066666666666667
+          ],
+          "correct": 912,
+          "layer_id": 25,
+          "overall_accuracy": 0.5066666666666667,
+          "total": 1800,
+          "worst_axis_accuracy": 0.5016666666666667
+        },
+        {
+          "axis_accuracy": [
+            0.5016666666666667,
+            0.49666666666666665,
+            0.49666666666666665
+          ],
+          "correct": 897,
+          "layer_id": 26,
+          "overall_accuracy": 0.49833333333333335,
+          "total": 1800,
+          "worst_axis_accuracy": 0.49666666666666665
+        },
+        {
+          "axis_accuracy": [
+            0.5633333333333334,
+            0.4483333333333333,
+            0.5266666666666666
+          ],
+          "correct": 923,
+          "layer_id": 27,
+          "overall_accuracy": 0.5127777777777778,
+          "total": 1800,
+          "worst_axis_accuracy": 0.4483333333333333
+        },
+        {
+          "axis_accuracy": [
+            0.53,
+            0.43,
+            0.525
+          ],
+          "correct": 891,
+          "layer_id": 28,
+          "overall_accuracy": 0.495,
+          "total": 1800,
+          "worst_axis_accuracy": 0.43
+        },
+        {
+          "axis_accuracy": [
+            0.53,
+            0.43833333333333335,
+            0.5233333333333333
+          ],
+          "correct": 895,
+          "layer_id": 29,
+          "overall_accuracy": 0.49722222222222223,
+          "total": 1800,
+          "worst_axis_accuracy": 0.43833333333333335
+        },
+        {
+          "axis_accuracy": [
+            0.5216666666666666,
+            0.46,
+            0.5333333333333333
+          ],
+          "correct": 909,
+          "layer_id": 30,
+          "overall_accuracy": 0.505,
+          "total": 1800,
+          "worst_axis_accuracy": 0.46
+        }
+      ],
+      "sample_count": 1800,
+      "score": "v^T(h_query-h_reference)",
+      "selected_layer": 15,
+      "selected_metrics": {
+        "axis_accuracy": [
+          0.9833333333333333,
+          0.9616666666666667,
+          0.72
+        ],
+        "correct": 1599,
+        "layer_id": 15,
+        "overall_accuracy": 0.8883333333333333,
+        "total": 1800,
+        "worst_axis_accuracy": 0.72
+      },
+      "selection_metric": "margin_sign_overall_accuracy",
+      "selection_rule": [
+        "overall_accuracy",
+        "worst_axis_accuracy",
+        "shallower_layer_id"
+      ],
+      "train_image_overlap_count": 0
+    },
+    "validation_samples": 1800,
+    "world_size": 4
+  },
+  "method": "final_logit_jacobian",
+  "model": {
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "hidden_size": 2560,
+    "layer_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "layer_numbering": "zero_based_post_block",
+    "model_id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "selected_layer": 15,
+    "tokenizer_id": "Qwen/Qwen3.5-4B",
+    "tokenizer_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  },
+  "negative_endpoints": [
+    "left",
+    "above",
+    "far"
+  ],
+  "normalization": "l2_unit_per_layer_axis",
+  "positive_endpoints": [
+    "right",
+    "below",
+    "close"
+  ],
+  "schema_version": "2.0.0",
+  "software": {
+    "numpy": "2.4.6",
+    "python": "3.11.13",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.9.0"
+  }
+}

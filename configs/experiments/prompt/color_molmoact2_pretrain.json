@@ -1,0 +1,12 @@
+{
+  "evaluation_id": "color_molmoact2_pretrain",
+  "model_adapter": "molmoact2_pretrain",
+  "source_configs": [
+    "configs/experiments/benchmarks/eval_molmoact2_pretrain_spatialtunnel1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmoact2_pretrain_embspatial1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmoact2_pretrain_cvbench_pairwise1250_coco1800_margin.json"
+  ],
+  "output_dir": "outputs/prompt/color/molmoact2_pretrain",
+  "runner": "prompt_color",
+  "suites": ["prompt-generalization", "prompt-color"]
+}

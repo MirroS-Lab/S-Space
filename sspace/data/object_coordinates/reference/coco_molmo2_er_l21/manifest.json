@@ -1,0 +1,71 @@
+{
+  "axis_provenance": {
+    "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+    "artifact_manifest_sha256": "647f2fea73e3c8c78a673d1b03892dc8806bdee76125bf975c1ef4bef65a48fb",
+    "axes_payload_sha256": "d696e41d3ccfd1c93727e3df7edab5c3e07268056bfd2a8c0b2e36b814e4a6ce",
+    "construction_commit": "43ae581ded167b2c0570e158f54d47595a8a286f",
+    "default_classification_layer": 22,
+    "layer_numbering": "zero_based_post_block",
+    "method": "final_logit_jacobian",
+    "report_layer": 21
+  },
+  "coordinate_conventions": {
+    "already_transformed": true,
+    "correlation": "Spearman rho (average ranks for ties)",
+    "distance": "proximity-median(proximity)",
+    "distance_median": 0.53067551943812,
+    "horizontal_vertical": "2*c-1",
+    "line_fit": "ordinary least squares with intercept",
+    "pair_difference": "target minus reference, matched by dataset/model/pair_id/layer/axis",
+    "positive_endpoints": {
+      "distance": "close",
+      "horizontal": "right",
+      "vertical": "below"
+    },
+    "single_object_fit": "pool target and reference rows; one fit per axis"
+  },
+  "counts": {
+    "fit_summary_rows": 12,
+    "pair_difference_rows": 6348,
+    "pair_difference_rows_per_axis": 2116,
+    "pairs": 2116,
+    "single_object_rows": 12696,
+    "single_object_rows_per_axis": 4232
+  },
+  "dataset": "COCO-2017-val",
+  "dataset_note": "Historical 2,116-pair continuous-coordinate subset; distinct from COCO-1800 layer-selection validation.",
+  "files": {
+    "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/pair_difference_scatters.svg": "21a95e8b6013e590535d18ce110c976bd38936ea644ee4297ba34a183cb24d41",
+    "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/single_object_scatters.svg": "4251c44807a87dd46f6768b445356db513fe78ac7a72e80471d2b5f46fa6e75b",
+    "sspace/experiments/analysis/object_coordinates/resources/fonts/InstrumentSans-Bold.ttf": "7e340f4d551d905bc105caeda080ecbab71d321fe19ff871681846091674bd61",
+    "sspace/experiments/analysis/object_coordinates/resources/fonts/InstrumentSans-OFL.txt": "bc29b497c4e8316b2d248322a9cea670c2f0afc24ae0eb7bbaa54e02e00eebab",
+    "sspace/experiments/analysis/object_coordinates/resources/fonts/InstrumentSans-Regular.ttf": "571bcfd8fff45803043b5fa3029ffd19501796c42bca686f331ecb1efe6ca2be",
+    "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/fit_summary.csv": "d8d6a0e19110c447b2d490c942e0075f3a692d15d925d2052041ab109b87e53e",
+    "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/pair_difference_points.csv": "32aa0079cc9bdca349cc964897e759476d475bc223bd4de857c689bc83a69f84",
+    "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/single_object_points.csv": "b6dfb41fb73af46176a31d6d77c7b24cab46d8a2f680ddbaf304315285960ffb"
+  },
+  "input": "sspace/data/object_coordinates/reference/coco_molmo2_er_l21/single_object_points.csv",
+  "input_format": "standard_v1",
+  "protocol": "object_coordinates_coco_molmo2_er_l21_v1",
+  "schema_version": "1.0.0",
+  "selections": [
+    {
+      "layer": 21,
+      "model": "Molmo2-ER"
+    }
+  ],
+  "source": {
+    "final_directory": "release/outputs/object_coordinates/coco_molmo2_er_l21_object_coordinates_final_20260901",
+    "plot_script_sha256": "b96dbdc60a200ae0a3be596e3ef742fefdc842f7e05dfed4643cefab541c060c",
+    "project": "contrastive-probing",
+    "reference_manifest": {
+      "path": "release/data/object_coordinates/reference/manifest.json",
+      "sha256": "326d5c5dec30320f229281059679ed06268d14efb0acd9a9f4ce803174528ea3"
+    },
+    "reference_points": {
+      "path": "release/data/object_coordinates/reference/coco/selected_layer_single_object_points.csv",
+      "sha256": "9120b4eb7db9a29816f56456dfb6fc16eb178a37fa28341c0f9ebc328e527f1b"
+    },
+    "scoring_script_sha256": "d1c6ca9320b9eb94e16b00de9dcbadd48004d95b5214303b349c4fe0ee7378a9"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sspace-construction",
+  "classification": "construction",
+  "steps": [
+    {
+      "script": "scripts/run_sspace.sh",
+      "args": []
+    }
+  ]
+}

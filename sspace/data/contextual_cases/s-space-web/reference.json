@@ -1,0 +1,167 @@
+{
+  "source_branch": "s-space",
+  "source_commit": "eab5e28f36bb7448c1049b33dfc13fa181ef5a70",
+  "offscreen_observer_readouts": [
+    {
+      "family": "offscreen_ball",
+      "axis": "H",
+      "intervals": [
+        {
+          "label": "ball",
+          "mean": -0.942,
+          "low": -1.17,
+          "high": -0.695
+        },
+        {
+          "label": "goalkeeper",
+          "mean": 1.415,
+          "low": 1.328,
+          "high": 1.503
+        }
+      ]
+    },
+    {
+      "family": "offscreen_owner",
+      "axis": "H",
+      "intervals": [
+        {
+          "label": "owner",
+          "mean": 1.463,
+          "low": 1.112,
+          "high": 1.797
+        },
+        {
+          "label": "dog",
+          "mean": 0.294,
+          "low": -0.247,
+          "high": 0.781
+        }
+      ]
+    },
+    {
+      "family": "offscreen_train",
+      "axis": "D",
+      "intervals": [
+        {
+          "label": "train",
+          "mean": 1.625,
+          "low": 1.235,
+          "high": 2.043
+        },
+        {
+          "label": "worker",
+          "mean": 3.49,
+          "low": 3.063,
+          "high": 4.007
+        }
+      ]
+    },
+    {
+      "family": "observer_desk",
+      "axis": "D",
+      "intervals": [
+        {
+          "label": "you",
+          "mean": 4.197,
+          "low": 2.998,
+          "high": 5.32
+        },
+        {
+          "label": "desk",
+          "mean": 2.153,
+          "low": 2.024,
+          "high": 2.292
+        },
+        {
+          "label": "curtains",
+          "mean": -1.519,
+          "low": -1.616,
+          "high": -1.416
+        }
+      ]
+    },
+    {
+      "family": "observer_past",
+      "axis": "D",
+      "intervals": [
+        {
+          "label": "you",
+          "mean": 2.599547,
+          "low": 2.335518,
+          "high": 2.856525
+        },
+        {
+          "label": "delivery robot",
+          "mean": 2.97114,
+          "low": 2.917422,
+          "high": 3.023469
+        }
+      ]
+    },
+    {
+      "family": "observer_toward",
+      "axis": "D",
+      "intervals": [
+        {
+          "label": "you",
+          "mean": 4.588106,
+          "low": 4.387345,
+          "high": 4.792362
+        },
+        {
+          "label": "delivery robot",
+          "mean": 2.981626,
+          "low": 2.914584,
+          "high": 3.041442
+        }
+      ]
+    }
+  ],
+  "offscreen_observer_template_status": "Representative prompts only; complete bootstrap template sets are not specified by the web page.",
+  "political_readouts": {
+    "Molmo2-ER": [
+      -5.533,
+      -3.338,
+      -2.404
+    ],
+    "MolmoAct2": [
+      -2.956,
+      -1.768,
+      -0.567
+    ],
+    "MolmoAct2-Pretrain": [
+      -0.102,
+      0.36,
+      1.187
+    ],
+    "Qwen3.5-4B": [
+      -0.231,
+      0.136,
+      0.464
+    ],
+    "Qwen3.6-27B": [
+      -1.564,
+      -0.742,
+      1.6
+    ]
+  },
+  "political_identity_order": [
+    "socialist",
+    "moderate",
+    "conservative"
+  ],
+  "political_normalization": "Within-model population z-score (ddof=0), target horizontal projection.",
+  "model_layers": "Not specified in the offscreen/observer and political web definitions; require explicit run configuration.",
+  "sha256": {
+    "observer-desk.webp": "8d57c472e5f69a353a5e17c41e02d1402810e355bbba04a0b14c59e1d3f0802c",
+    "observer-robot.webp": "d65dc70dd7a82d73121dc520c6da8af939c504823d9127081ed8869144bbcc8a",
+    "offscreen-ball.webp": "dca3e3c2edb2e6705fd787e419a9f483911c685ebe0d3d09a935621b3d6759ad",
+    "offscreen-owner.webp": "2b0294c059d2da0fcabf7df529c7e34bf05bdaf85aaa6964bfe374438ecbedb9",
+    "offscreen-train.webp": "cd3a92811d3b2ea1e89d83c5ba9e2ad3c37a1f42f1808acee70527ccc62ed598",
+    "parliament.webp": "e786d72ab252c88f7f72dae9897b0cabbada60f870e4d22c925e91d3c0ee7188"
+  },
+  "source_files_sha256": {
+    "content/s-space.ts": "686b470cf9625d6e92a9c98cd2cbdeb1a2e2c200f855a1466df65641d0e619f5",
+    "components/blog/SSpacePoliticalFigure.tsx": "432561de44754701ea37a2eba87671d05a4c1014bc2c52d55af828594b1543d2"
+  }
+}

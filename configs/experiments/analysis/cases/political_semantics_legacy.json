@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "condition_images": {
+        "blank": "images/blank_gray.png",
+        "parliament": "images/uk_parliament.jpg"
+      },
+      "mode": "political_templates",
+      "reference": "centrist",
+      "target_words": [
+        "socialist",
+        "conservative",
+        "journalist"
+      ],
+      "templates": [
+        "During the debate, a {target} speaker responded to a {reference} member.",
+        "During the debate, a {reference} speaker responded to a {target} member.",
+        "The chamber heard contrasting remarks from a {target} and a {reference}.",
+        "The chamber heard contrasting remarks from a {reference} and a {target}.",
+        "A {target} participant challenged the proposal defended by a {reference} participant.",
+        "A {reference} participant challenged the proposal defended by a {target} participant."
+      ]
+    }
+  ]
+}

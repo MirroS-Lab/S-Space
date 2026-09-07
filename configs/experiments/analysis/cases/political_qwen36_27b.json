@@ -1,0 +1,18 @@
+{
+  "runner": "contextual_case",
+  "suites": [
+    "contextual-cases"
+  ],
+  "evaluation_id": "political_qwen36_27b_l43",
+  "model_adapter": "qwen36_27b",
+  "model_path": ".cache/assets/models/qwen36_27b",
+  "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2",
+  "image_root": "sspace/data/contextual_cases/s-space-web",
+  "manifest_path": "outputs/contextual-cases/political.jsonl",
+  "output_dir": "outputs/contextual-cases/political/qwen36_27b/readout",
+  "selected_layer": 43,
+  "device": "cuda:0",
+  "seed": 42,
+  "checkpoint_every": 10,
+  "image_max_pixels": null
+}

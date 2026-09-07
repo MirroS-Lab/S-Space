@@ -1,0 +1,18 @@
+{
+  "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+  "model_adapter": "molmoact2",
+  "model_path": ".cache/assets/models/molmoact2",
+  "benchmark": "spatialtunnel",
+  "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+  "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827",
+  "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/spatialtunnel1200/projection",
+  "layer_id": 19,
+  "prompt_style": "baseline",
+  "decision_protocol": "margin_sign_v1",
+  "image_max_pixels": null,
+  "device": "cuda:0",
+  "checkpoint_every": 25,
+  "seed": 42,
+  "runner": "pairwise_projection",
+  "suites": ["benchmarks-generalization", "spatialtunnel", "projection"]
+}

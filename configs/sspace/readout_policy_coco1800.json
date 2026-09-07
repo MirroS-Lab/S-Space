@@ -1,0 +1,97 @@
+{
+  "axis_order": [
+    "horizontal",
+    "vertical",
+    "distance"
+  ],
+  "dataset_fingerprint": "125146e175ddb8f688628caca0e4544e3049bc12a80fca2924d75b192e8b7c3d",
+  "dataset_id": "coco_train2017_mask_depth_validation1800_v2",
+  "decision_protocol": "margin_sign_v1",
+  "models": [
+    {
+      "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+      "artifact_id": "molmo2_er_coco6000_final_logit_axes_v2",
+      "artifact_manifest_sha256": "647f2fea73e3c8c78a673d1b03892dc8806bdee76125bf975c1ef4bef65a48fb",
+      "hidden_size": 2560,
+      "model_adapter": "molmo2_er",
+      "selected_axes_float32_sha256": "32117d582c8ba745526bbf81e30347fa1bec54838b69de12bd6e9c46c137aa03",
+      "selected_layer": 22,
+      "selection_accuracy": 0.9338888888888889,
+      "selection_correct": 1681,
+      "selection_evidence_sha256": "efdf5399b2044e2ac2c786b26c259ff56e67a75dbde711dc517e1e35c9abae8f",
+      "selection_total": 1800
+    },
+    {
+      "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+      "artifact_id": "molmoact2_coco6000_final_logit_axes_v2",
+      "artifact_manifest_sha256": "6b5550b41deef720c1747b3894be59dfff7e9ac88b10c01b3515b7a85d0a5b87",
+      "hidden_size": 2560,
+      "model_adapter": "molmoact2",
+      "selected_axes_float32_sha256": "4bddb727129d2b3f8903a083aff8d910d31c8d44766ea0e377cb012f6ff643a6",
+      "selected_layer": 19,
+      "selection_accuracy": 0.9216666666666666,
+      "selection_correct": 1659,
+      "selection_evidence_sha256": "5ea203f453a0e3bbe449efe1b2bda0b16d82affb9ba095c5e2f5b9ab0d7db626",
+      "selection_total": 1800
+    },
+    {
+      "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2",
+      "artifact_id": "molmoact2_pretrain_coco6000_final_logit_axes_v2",
+      "artifact_manifest_sha256": "8e3782724e39ffb7514ea854dc0ab4ada483d643b5f19b1e8cb0b0b1024b7e74",
+      "hidden_size": 2560,
+      "model_adapter": "molmoact2_pretrain",
+      "selected_axes_float32_sha256": "4ac349bdc015bd36d73bf3ed755eedac88a914a3fd82b1b4a17e8ddc3a4c3db1",
+      "selected_layer": 18,
+      "selection_accuracy": 0.9222222222222223,
+      "selection_correct": 1660,
+      "selection_evidence_sha256": "731420703e8d9423f59bcccd793539bbf2e433a865dfce9277989cd4e8603343",
+      "selection_total": 1800
+    },
+    {
+      "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2",
+      "artifact_id": "qwen36_27b_coco6000_final_logit_axes_v2",
+      "artifact_manifest_sha256": "3011d5fcc57197ece5d581824394e5d071c1b30b4a22df97e61ac7072a70aa62",
+      "hidden_size": 5120,
+      "model_adapter": "qwen36_27b",
+      "selected_axes_float32_sha256": "a5681a1f5796fa82a756675b0d14058cb195396f707e3e3ea5d8720d7a7eb70b",
+      "selected_layer": 43,
+      "selection_accuracy": 0.9177777777777778,
+      "selection_correct": 1652,
+      "selection_evidence_sha256": "c93e9bf967ae3815d205b875b4094abd84155cf38143e01a97f117290cc0dc60",
+      "selection_total": 1800
+    },
+    {
+      "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2",
+      "artifact_id": "qwen35_4b_coco6000_final_logit_axes_v2",
+      "artifact_manifest_sha256": "f73cc334d542daa9868cb1daa9aeff27bda3c6dd0efd73e375e6cb6fbd9fedfd",
+      "hidden_size": 2560,
+      "model_adapter": "qwen35_4b",
+      "selected_axes_float32_sha256": "19fca767baa9beb519c0119a55d0cf2f60a7a62e2807c461f1cd86c0baa5eb2a",
+      "selected_layer": 15,
+      "selection_accuracy": 0.8883333333333333,
+      "selection_correct": 1599,
+      "selection_evidence_sha256": "04d13fec35ee533a19ee23047b36693ec66b03f5b73dece448badd7e48658278",
+      "selection_total": 1800
+    }
+  ],
+  "negative_endpoints": [
+    "left",
+    "above",
+    "far"
+  ],
+  "policy_id": "generalization_readout_coco1800_margin_v1",
+  "positive_endpoints": [
+    "right",
+    "below",
+    "close"
+  ],
+  "sample_count": 1800,
+  "schema_version": "1.0.0",
+  "selection_metric": "margin_sign_overall_accuracy",
+  "selection_rule": [
+    "overall_accuracy",
+    "worst_axis_accuracy",
+    "shallower_layer_id"
+  ],
+  "train_image_overlap_count": 0
+}

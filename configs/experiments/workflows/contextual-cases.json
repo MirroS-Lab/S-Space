@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "id": "contextual-cases",
+  "classification": "qualitative",
+  "steps": [
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.build_manifest",
+      "model": "molmo2_er",
+      "args": [
+        "--spec",
+        "configs/experiments/analysis/cases/offscreen_observer.json",
+        "--image-root",
+        "sspace/data/contextual_cases/s-space-web",
+        "--output",
+        "outputs/contextual-cases/offscreen.jsonl"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "molmo2_er",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/offscreen_molmo2_er.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/offscreen/molmo2_er/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/offscreen/molmo2_er/analysis",
+        "--protocol",
+        "web_showcase"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.build_manifest",
+      "model": "molmo2_er",
+      "args": [
+        "--spec",
+        "configs/experiments/analysis/cases/political_semantics.json",
+        "--image-root",
+        "sspace/data/contextual_cases/s-space-web",
+        "--output",
+        "outputs/contextual-cases/political.jsonl"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "molmo2_er",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/political_molmo2_er.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/political/molmo2_er/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/political/molmo2_er/analysis",
+        "--protocol",
+        "political_web"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "molmoact2",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/political_molmoact2.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/political/molmoact2/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/political/molmoact2/analysis",
+        "--protocol",
+        "political_web"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "molmoact2_pretrain",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/political_molmoact2_pretrain.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/political/molmoact2_pretrain/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/political/molmoact2_pretrain/analysis",
+        "--protocol",
+        "political_web"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "qwen35_4b",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/political_qwen35_4b.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/political/qwen35_4b/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/political/qwen35_4b/analysis",
+        "--protocol",
+        "political_web"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "model": "qwen36_27b",
+      "args": [
+        "--config",
+        "configs/experiments/analysis/cases/political_qwen36_27b.json"
+      ]
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "model": "molmo2_er",
+      "args": [
+        "--records",
+        "outputs/contextual-cases/political/qwen36_27b/readout/records.jsonl",
+        "--output-dir",
+        "outputs/contextual-cases/political/qwen36_27b/analysis",
+        "--protocol",
+        "political_web"
+      ]
+    }
+  ]
+}

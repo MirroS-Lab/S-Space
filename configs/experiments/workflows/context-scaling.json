@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "id": "context-scaling",
+  "classification": "quantitative",
+  "steps": [
+    {
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "args": [
+        "--configs",
+        "configs/experiments/spinbench/eval_molmo2_er_spinbench_without_premise_rotation.json",
+        "configs/experiments/spinbench/eval_molmo2_er_spinbench_with_premise_rotation.json",
+        "--output-root",
+        "outputs/reproduction/spinbench_layerwise"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "context",
+        "--inputs",
+        "outputs/reproduction/spinbench_layerwise/molmo2_er/without/layerwise_metrics.csv",
+        "outputs/reproduction/spinbench_layerwise/molmo2_er/with/layerwise_metrics.csv",
+        "--output-dir",
+        "outputs/reproduction/context_scaling/molmo2_er"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "args": [
+        "--configs",
+        "configs/experiments/spinbench/eval_molmoact2_spinbench_without_premise_rotation.json",
+        "configs/experiments/spinbench/eval_molmoact2_spinbench_with_premise_rotation.json",
+        "--output-root",
+        "outputs/reproduction/spinbench_layerwise"
+      ],
+      "model": "molmoact2"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "context",
+        "--inputs",
+        "outputs/reproduction/spinbench_layerwise/molmoact2/without/layerwise_metrics.csv",
+        "outputs/reproduction/spinbench_layerwise/molmoact2/with/layerwise_metrics.csv",
+        "--output-dir",
+        "outputs/reproduction/context_scaling/molmoact2"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "args": [
+        "--configs",
+        "configs/experiments/spinbench/eval_molmoact2_pretrain_spinbench_without_premise_rotation.json",
+        "configs/experiments/spinbench/eval_molmoact2_pretrain_spinbench_with_premise_rotation.json",
+        "--output-root",
+        "outputs/reproduction/spinbench_layerwise"
+      ],
+      "model": "molmoact2_pretrain"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "context",
+        "--inputs",
+        "outputs/reproduction/spinbench_layerwise/molmoact2_pretrain/without/layerwise_metrics.csv",
+        "outputs/reproduction/spinbench_layerwise/molmoact2_pretrain/with/layerwise_metrics.csv",
+        "--output-dir",
+        "outputs/reproduction/context_scaling/molmoact2_pretrain"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "args": [
+        "--configs",
+        "configs/experiments/spinbench/eval_qwen35_4b_spinbench_without_premise_rotation.json",
+        "configs/experiments/spinbench/eval_qwen35_4b_spinbench_with_premise_rotation.json",
+        "--output-root",
+        "outputs/reproduction/spinbench_layerwise"
+      ],
+      "model": "qwen35_4b"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "context",
+        "--inputs",
+        "outputs/reproduction/spinbench_layerwise/qwen35_4b/without/layerwise_metrics.csv",
+        "outputs/reproduction/spinbench_layerwise/qwen35_4b/with/layerwise_metrics.csv",
+        "--output-dir",
+        "outputs/reproduction/context_scaling/qwen35_4b"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "args": [
+        "--configs",
+        "configs/experiments/spinbench/eval_qwen36_27b_spinbench_without_premise_rotation.json",
+        "configs/experiments/spinbench/eval_qwen36_27b_spinbench_with_premise_rotation.json",
+        "--output-root",
+        "outputs/reproduction/spinbench_layerwise"
+      ],
+      "model": "qwen36_27b"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "context",
+        "--inputs",
+        "outputs/reproduction/spinbench_layerwise/qwen36_27b/without/layerwise_metrics.csv",
+        "outputs/reproduction/spinbench_layerwise/qwen36_27b/with/layerwise_metrics.csv",
+        "--output-dir",
+        "outputs/reproduction/context_scaling/qwen36_27b"
+      ],
+      "model": "molmo2_er"
+    }
+  ]
+}

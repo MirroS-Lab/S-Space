@@ -1,0 +1,34 @@
+{
+  "artifact_id": "qwen36_27b_coco6000_final_logit_axes_v2",
+  "artifact_checksums_sha256": "11613942607c82a2ddbcd5c5098eef9ceecccbdacf2f2360d4b774e66a038d96",
+  "figure": {
+    "path": "reference/direction_token_centroids_up_positive.png",
+    "sha256": "fe41bbf5027ad76c41fac5e78de99e9a4f7c68c740a007d4eb0b85f1bf074036"
+  },
+  "scatter_figure": {
+    "path": "reference/direction_token_scatter_up_positive.png",
+    "sha256": "dbb745a39d6c75c784f725db98791651255a769e3f9cc3d8c516aba8fa058a2d"
+  },
+  "full_records": {
+    "checked_in": false,
+    "description": "Full generated responses and exact token IDs; regenerate with the extractor.",
+    "sha256": "0d505dce94e1c45c3bcf30072a76157387814f1921a34c5b564dbfa579773d48"
+  },
+  "layer": 43,
+  "manifest": {
+    "path": "manifest.jsonl",
+    "sha256": "836b8dbc2d44fbf7b22c1d6e2e8eeb168604b8316315059b7c7ded5373cedf22"
+  },
+  "model_id": "Qwen/Qwen3.6-27B",
+  "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "protocol": "qwen_visible_cot_then_exact_generated_token_replay_v2",
+  "question_count": 191,
+  "reference_outputs": {
+    "direction_centroids_up_positive.csv": "c78a9a7f8990c3191e166fa635b1ead77622d97371d26b47bd65aa245c665cc1",
+    "direction_token_projections.csv": "3a6617d58a290acddb4243d7c31f58652b854b45fd72b0f358c421fa67a82945"
+  },
+  "selection_sha256": "75d87ec36697132585640dcca8cf6d0b79f587ec459b74112be70851fffbca04",
+  "source_artifact_checksums_sha256": "edc24336a6d2c63a1a6fd2bc7cd0682a55dec2fc868f86278d8b2705fc90846d",
+  "artifact_tensors_sha256": "082a8d580c86e325f44cc6371f631d3827044f79a4edce0f2bece8cc34e0d20c",
+  "migration_note": "Axis tensor bytes match the source release exactly; the artifact manifest and checksum file reflect the sspace package layout."
+}

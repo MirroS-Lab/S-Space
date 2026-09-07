@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "id": "direction-coupling",
+  "classification": "quantitative",
+  "steps": [
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.prepare_mmsi_eightway",
+      "args": [
+        "--output-dir",
+        "data/processed/mmsi_eightway"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.extract_qwen_mmsi_direction_tokens",
+      "args": [
+        "--manifest",
+        "data/processed/mmsi_eightway/manifest.jsonl",
+        "--model-path",
+        ".cache/assets/models/qwen36_27b",
+        "--artifact-dir",
+        "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2",
+        "--layer",
+        "43",
+        "--max-new-tokens",
+        "1536",
+        "--device",
+        "cuda:0",
+        "--output-dir",
+        "outputs/reproduction/direction_coupling"
+      ],
+      "model": "qwen36_27b"
+    },
+    {
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.plot_qwen_mmsi_direction_centroids",
+      "args": [
+        "--tokens",
+        "outputs/reproduction/direction_coupling/direction_token_projections.csv",
+        "--output-dir",
+        "outputs/reproduction/direction_coupling/analysis"
+      ],
+      "model": "molmo2_er"
+    }
+  ]
+}

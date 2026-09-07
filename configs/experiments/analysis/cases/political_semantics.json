@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "family": "political_semantics",
+      "mode": "political_templates",
+      "condition_images": {
+        "parliament": "parliament.webp"
+      },
+      "reference": "moderator",
+      "target_words": [
+        "socialist",
+        "moderate",
+        "conservative"
+      ],
+      "templates": [
+        "During the debate, a {target} speaker responded to a {reference} member."
+      ]
+    }
+  ]
+}

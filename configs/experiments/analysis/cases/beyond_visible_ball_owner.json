@@ -1,0 +1,70 @@
+{
+  "groups": [
+    {
+      "condition_images": {
+        "mirror": "cape-verde-goalkeeper-offscreen-ball-left-mirrored.png",
+        "original": "cape-verde-goalkeeper-offscreen-ball-left.png"
+      },
+      "effect_sign": -1,
+      "family": "offscreen_ball",
+      "mode": "paired_prompts",
+      "prompts": [
+        "The goalkeeper dives toward the ball.",
+        "The goalkeeper reaches to stop the ball.",
+        "The ball is just beyond the goalkeeper's reach.",
+        "The goalkeeper lunges for the ball.",
+        "The goalkeeper stretches toward the ball.",
+        "The goalkeeper tries to catch the ball.",
+        "The goalkeeper attempts to block the ball.",
+        "The goalkeeper extends a glove toward the ball.",
+        "The goalkeeper reacts to the ball.",
+        "The goalkeeper tracks the ball.",
+        "The goalkeeper makes a save attempt on the ball.",
+        "The ball is the target of the goalkeeper's dive.",
+        "The ball remains outside the goalkeeper's reach.",
+        "The ball is moving past the goalkeeper.",
+        "The ball approaches the goalkeeper's glove.",
+        "Reaching across the goal, the goalkeeper pursues the ball.",
+        "Fully extended, the goalkeeper tries to intercept the ball.",
+        "During the save, the goalkeeper focuses on the ball.",
+        "Near the post, the goalkeeper stretches for the ball.",
+        "In front of the net, the goalkeeper dives for the ball."
+      ],
+      "reference": "goalkeeper",
+      "target": "ball"
+    },
+    {
+      "condition_images": {
+        "mirror": "dog-offscreen-owner-left-real-commons-crop-mirror.jpg",
+        "original": "dog-offscreen-owner-right-real-commons-crop.jpg"
+      },
+      "effect_sign": 1,
+      "family": "offscreen_owner",
+      "mode": "paired_prompts",
+      "prompts": [
+        "The dog pulls toward its owner.",
+        "The dog looks toward its owner at the end of the leash.",
+        "The owner is holding the dog's leash.",
+        "The dog strains on the leash toward its owner.",
+        "The dog follows the leash toward its owner.",
+        "The dog waits for its owner.",
+        "The dog searches for its owner.",
+        "The dog turns toward its owner.",
+        "The dog responds to its owner.",
+        "The dog pulls while watching its owner.",
+        "The owner holds the leash attached to the dog.",
+        "The owner leads the dog by the leash.",
+        "The owner waits out of view as the dog pulls.",
+        "The owner calls to the dog.",
+        "The owner controls the leash while the dog moves.",
+        "With the leash taut, the dog pulls toward its owner.",
+        "Looking along the leash, the dog focuses on its owner.",
+        "During the walk, the dog follows its owner.",
+        "At the end of the leash, the owner guides the dog.",
+        "Outside the frame, the owner holds the leash of the dog."
+      ],
+      "reference": "dog",
+      "target": "owner"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "runner": "contextual_case",
+  "suites": [
+    "contextual-cases"
+  ],
+  "evaluation_id": "political_molmo2_er_l21",
+  "model_adapter": "molmo2_er",
+  "model_path": ".cache/assets/models/molmo2_er",
+  "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+  "image_root": "sspace/data/contextual_cases/s-space-web",
+  "manifest_path": "outputs/contextual-cases/political.jsonl",
+  "output_dir": "outputs/contextual-cases/political/molmo2_er/readout",
+  "selected_layer": 21,
+  "device": "cuda:0",
+  "seed": 42,
+  "checkpoint_every": 10,
+  "image_max_pixels": null
+}

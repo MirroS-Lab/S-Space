@@ -1,0 +1,12 @@
+{
+  "evaluation_id": "color_qwen36_27b",
+  "model_adapter": "qwen36_27b",
+  "source_configs": [
+    "configs/experiments/benchmarks/eval_qwen36_27b_spatialtunnel1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_qwen36_27b_embspatial1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_qwen36_27b_cvbench_pairwise1250_coco1800_margin.json"
+  ],
+  "output_dir": "outputs/prompt/color/qwen36_27b",
+  "runner": "prompt_color",
+  "suites": ["prompt-generalization", "prompt-color"]
+}

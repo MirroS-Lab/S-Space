@@ -1,0 +1,12 @@
+{
+  "evaluation_id": "color_molmo2_er",
+  "model_adapter": "molmo2_er",
+  "source_configs": [
+    "configs/experiments/benchmarks/eval_molmo2_er_spatialtunnel1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmo2_er_embspatial1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmo2_er_cvbench_pairwise1250_coco1800_margin.json"
+  ],
+  "output_dir": "outputs/prompt/color/molmo2_er",
+  "runner": "prompt_color",
+  "suites": ["prompt-generalization", "prompt-color"]
+}

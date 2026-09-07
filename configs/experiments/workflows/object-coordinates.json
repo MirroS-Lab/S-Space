@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "id": "object-coordinates",
+  "classification": "quantitative",
+  "steps": [
+    {
+      "script": "scripts/plot_object_coordinates.sh",
+      "args": []
+    }
+  ]
+}

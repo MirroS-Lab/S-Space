@@ -1,0 +1,109 @@
+{
+  "dataset": "RunsenXu/MMSI-Bench",
+  "split": "test",
+  "source_rows": 1000,
+  "selected_rows": 191,
+  "selection": "gold option normalizes to one of eight geographic directions; no question-type or thought filter",
+  "excluded_egocentric_only": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
+  "direction_order": [
+    "north",
+    "northeast",
+    "east",
+    "southeast",
+    "south",
+    "southwest",
+    "west",
+    "northwest"
+  ],
+  "direction_counts": {
+    "northwest": 36,
+    "southeast": 31,
+    "northeast": 33,
+    "southwest": 27,
+    "west": 22,
+    "north": 11,
+    "south": 10,
+    "east": 21
+  },
+  "question_type_counts": {
+    "Positional Relationship (Reg.–Reg.)": 42,
+    "MSR": 42,
+    "Attribute (Appr.)": 27,
+    "Positional Relationship (Obj.–Reg.)": 33,
+    "Positional Relationship (Obj.–Obj.)": 36,
+    "Positional Relationship (Cam.–Cam.)": 6,
+    "Positional Relationship (Cam.–Reg.)": 4,
+    "Motion (Obj.)": 1
+  },
+  "question_type_by_direction": {
+    "Attribute (Appr.)": {
+      "southeast": 1,
+      "northeast": 6,
+      "northwest": 5,
+      "southwest": 1,
+      "west": 7,
+      "east": 6,
+      "north": 1
+    },
+    "MSR": {
+      "northeast": 9,
+      "north": 3,
+      "south": 2,
+      "southeast": 9,
+      "west": 3,
+      "northwest": 5,
+      "east": 3,
+      "southwest": 8
+    },
+    "Motion (Obj.)": {
+      "southwest": 1
+    },
+    "Positional Relationship (Cam.–Cam.)": {
+      "northeast": 2,
+      "north": 1,
+      "southeast": 2,
+      "east": 1
+    },
+    "Positional Relationship (Cam.–Reg.)": {
+      "southeast": 1,
+      "west": 1,
+      "south": 1,
+      "northwest": 1
+    },
+    "Positional Relationship (Obj.–Obj.)": {
+      "northwest": 8,
+      "northeast": 6,
+      "east": 5,
+      "southeast": 3,
+      "north": 2,
+      "southwest": 5,
+      "south": 3,
+      "west": 4
+    },
+    "Positional Relationship (Obj.–Reg.)": {
+      "southwest": 4,
+      "northwest": 9,
+      "west": 2,
+      "southeast": 9,
+      "northeast": 6,
+      "east": 3
+    },
+    "Positional Relationship (Reg.–Reg.)": {
+      "northwest": 8,
+      "southeast": 6,
+      "northeast": 4,
+      "southwest": 8,
+      "north": 4,
+      "west": 5,
+      "south": 4,
+      "east": 3
+    }
+  },
+  "images_downloaded": true,
+  "source_parquet": "user-supplied official MMSI_Bench.parquet"
+}

@@ -1,0 +1,18 @@
+{
+  "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+  "model_adapter": "molmoact2",
+  "model_path": ".cache/assets/models/molmoact2",
+  "benchmark": "embspatial_balanced1200",
+  "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+  "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c",
+  "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/embspatial1200/projection",
+  "layer_id": 19,
+  "prompt_style": "baseline",
+  "decision_protocol": "margin_sign_v1",
+  "image_max_pixels": null,
+  "device": "cuda:0",
+  "checkpoint_every": 25,
+  "seed": 42,
+  "runner": "pairwise_projection",
+  "suites": ["benchmarks-generalization", "embspatial", "projection"]
+}

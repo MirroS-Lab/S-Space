@@ -1,0 +1,18 @@
+.cache/
+.envs/
+.venv/
+.runtime/
+.tmp/
+data/processed/
+outputs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Local reproduction notes and writing references.
+/PATH.md
+/PROGRESS.md
+/reference_readme.md
+/figure15_16_historical_results_20260906.tar.gz

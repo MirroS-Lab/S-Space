@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "evaluation_id": "qwen36_27b_spinbench_without_premise_thinking_greedy32k_v1",
+  "model_adapter": "qwen36_27b",
+  "model_path": ".cache/assets/models/qwen36_27b",
+  "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+  "image_root": ".cache/assets/datasets/spinbench",
+  "premise_mode": "without",
+  "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+  "expected_sample_count": 146,
+  "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+  "thinking": true,
+  "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+  "max_new_tokens": 32768,
+  "image_max_pixels": null,
+  "output_dir": "outputs/release_spinbench_direct/qwen36_27b_without_premise_thinking_greedy32k_v1",
+  "device": "cuda:0",
+  "checkpoint_every": 1,
+  "seed": 42,
+  "runner": "spinbench_direct",
+  "suites": ["spinbench", "spinbench-direct"]
+}

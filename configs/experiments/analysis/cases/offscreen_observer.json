@@ -1,0 +1,71 @@
+{
+  "groups": [
+    {
+      "mode": "web_showcase",
+      "family": "offscreen_ball",
+      "image": "offscreen-ball.webp",
+      "prompt": "The goalkeeper dives toward the ball.",
+      "tokens": [
+        "goalkeeper",
+        "ball"
+      ],
+      "axis": "horizontal"
+    },
+    {
+      "mode": "web_showcase",
+      "family": "offscreen_owner",
+      "image": "offscreen-owner.webp",
+      "prompt": "The dog pulls toward its owner.",
+      "tokens": [
+        "dog",
+        "owner"
+      ],
+      "axis": "horizontal"
+    },
+    {
+      "mode": "web_showcase",
+      "family": "offscreen_train",
+      "image": "offscreen-train.webp",
+      "prompt": "The worker waits for the train beside the tunnel.",
+      "tokens": [
+        "worker",
+        "train"
+      ],
+      "axis": "distance"
+    },
+    {
+      "mode": "web_showcase",
+      "family": "observer_desk",
+      "image": "observer-desk.webp",
+      "prompt": "Compared with curtains, is the desk farther from or closer to you?",
+      "tokens": [
+        "curtains",
+        "desk",
+        "you"
+      ],
+      "axis": "distance"
+    },
+    {
+      "mode": "web_showcase",
+      "family": "observer_past",
+      "image": "observer-robot.webp",
+      "prompt": "Moving past you, the delivery robot continues along its route.",
+      "tokens": [
+        "you",
+        "delivery robot"
+      ],
+      "axis": "distance"
+    },
+    {
+      "mode": "web_showcase",
+      "family": "observer_toward",
+      "image": "observer-robot.webp",
+      "prompt": "Moving toward you, the delivery robot continues along its route.",
+      "tokens": [
+        "you",
+        "delivery robot"
+      ],
+      "axis": "distance"
+    }
+  ]
+}

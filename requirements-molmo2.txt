@@ -1,0 +1,17 @@
+# Molmo2-ER, preprocessing, and CPU smoke (Python 3.10).
+accelerate==1.13.0
+einops==0.8.1
+huggingface-hub==0.36.2
+matplotlib==3.8.4
+numpy==2.2.6
+pandas==2.3.3
+pillow==12.3.0
+pycocotools==2.0.10
+pyarrow==20.0.0
+safetensors==0.8.0
+scipy==1.15.3
+torch==2.13.0
+torchvision==0.28.0
+tqdm==4.68.4
+transformers==4.57.6
+

@@ -1,0 +1,12 @@
+{
+  "evaluation_id": "where_qwen35_4b",
+  "model_adapter": "qwen35_4b",
+  "source_configs": [
+    "configs/experiments/benchmarks/eval_qwen35_4b_spatialtunnel1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_qwen35_4b_embspatial1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_qwen35_4b_cvbench_pairwise1250_coco1800_margin.json"
+  ],
+  "output_dir": "outputs/prompt/where/qwen35_4b",
+  "runner": "prompt_where",
+  "suites": ["prompt-generalization", "prompt-where"]
+}

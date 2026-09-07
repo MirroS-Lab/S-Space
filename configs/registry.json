@@ -1,0 +1,2448 @@
+{
+  "expected_command_count": 89,
+  "expected_config_count": 83,
+  "expected_workflow_count": 8,
+  "formal_workflows": [
+    {
+      "classification": "quantitative",
+      "config": "configs/experiments/action_supervision/instructpart_prompt_ensemble.json",
+      "id": "action_supervision/instructpart_prompt_ensemble",
+      "runner": "scripts/run_action_supervision.sh",
+      "sha256": "7a74c99ab65db00f2ae62bf0e34a275a1ea27493b1751707a54e005d6e84fbfc"
+    },
+    {
+      "id": "context-scaling",
+      "classification": "quantitative",
+      "config": "configs/experiments/workflows/context-scaling.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "2de83ef4ca2f4324cb3e2764d138c7943c9aaf8b8f82a4cece06a7a39dedcb90"
+    },
+    {
+      "id": "contextual-cases",
+      "classification": "qualitative",
+      "config": "configs/experiments/workflows/contextual-cases.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "4d49499c6bcab4fa1a095208d50ae21a76a86e3a55aa7d9e3579193ea27b8c90"
+    },
+    {
+      "id": "cot-evolution",
+      "classification": "quantitative",
+      "config": "configs/experiments/workflows/cot-evolution.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "d8ee8842bb953e91657f8954f3fc46f96fad4d7c7e6a6448f5f567e687f13ada"
+    },
+    {
+      "id": "direction-coupling",
+      "classification": "quantitative",
+      "config": "configs/experiments/workflows/direction-coupling.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "a88d76d9666b6ced16eaaa057f6f61f1f567d085f09599da9def3a553dd469c8"
+    },
+    {
+      "id": "object-coordinates",
+      "classification": "quantitative",
+      "config": "configs/experiments/workflows/object-coordinates.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "217605dff772fddc40db66c38cab79fafefc195fb402c6ef319520bacf203ca1"
+    },
+    {
+      "id": "spatial-causality",
+      "classification": "quantitative",
+      "config": "configs/experiments/workflows/spatial-causality.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "d03a6c75dbd377b822b4a40b164920f329f4f41ad6ec99d9dddd63c88434a017"
+    },
+    {
+      "id": "sspace-construction",
+      "classification": "construction",
+      "config": "configs/experiments/workflows/sspace-construction.json",
+      "runner": "sspace/experiments/workflows.py",
+      "sha256": "d1b4e824da3e93f416df713b5e19a0d44c1343330ee48e466f42bd0907734610"
+    }
+  ],
+  "formal_configs": [
+    {
+      "path": "configs/experiments/analysis/cases/offscreen_molmo2_er.json",
+      "sha256": "842d40cfa2876c3f1ff436524048825f4dd6744541724f3065a99f8c3d4ffc59",
+      "runner": "contextual_case",
+      "model_adapter": "molmo2_er",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/offscreen/molmo2_er/readout"
+    },
+    {
+      "path": "configs/experiments/analysis/cases/political_molmo2_er.json",
+      "sha256": "68adfc60f65e323d2cbf537b6471e8e24e07127b44dee7b09c305f7b7dcd6d60",
+      "runner": "contextual_case",
+      "model_adapter": "molmo2_er",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/political/molmo2_er/readout"
+    },
+    {
+      "path": "configs/experiments/analysis/cases/political_molmoact2.json",
+      "sha256": "5312cc5d391060cc5d551b086e5f9f946cb701ca9d959501b7b4123fed2f531e",
+      "runner": "contextual_case",
+      "model_adapter": "molmoact2",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/political/molmoact2/readout"
+    },
+    {
+      "path": "configs/experiments/analysis/cases/political_molmoact2_pretrain.json",
+      "sha256": "e8899b305144e24078a6efb51a0c4be99f11d7c5e1e8a8429452175d506f621e",
+      "runner": "contextual_case",
+      "model_adapter": "molmoact2_pretrain",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/political/molmoact2_pretrain/readout"
+    },
+    {
+      "path": "configs/experiments/analysis/cases/political_qwen35_4b.json",
+      "sha256": "c247962981b04b301c4861da35baad938b18ff547ada16695a5381cff4436549",
+      "runner": "contextual_case",
+      "model_adapter": "qwen35_4b",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/political/qwen35_4b/readout"
+    },
+    {
+      "path": "configs/experiments/analysis/cases/political_qwen36_27b.json",
+      "sha256": "7cfa0557a6b1ca9d999e40897d832b2967fdd1d01e4bf9659e2d9ba894edb936",
+      "runner": "contextual_case",
+      "model_adapter": "qwen36_27b",
+      "suites": [
+        "contextual-cases"
+      ],
+      "output_dir": "outputs/contextual-cases/political/qwen36_27b/readout"
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmo2_er_cvbench_pairwise1250_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/cvbench_pairwise1250/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmo2_er_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "276201fb022cd155fcd96110ece9905c0dba1a9f111f2532d1e91c6c9dc2565d",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "embspatial_balanced1200",
+        "dataset_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "420a54b9bd9a275da2f089cb27f5440926f58f78ac1459e3e6a00cffae563426",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmo2_er_embspatial1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/embspatial1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmo2_er_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "708cb91ec23d518730ab4a60c4c92af2fe9692a0caabc0072dcb99e987f530d9",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmo2_er_spatialtunnel1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/spatialtunnel1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmo2_er_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "dc8d1a023297953e89f5ca84d7749fb0dc4333c9aab5efed4d2a05ac70b2feef",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_cvbench_pairwise1250_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/cvbench_pairwise1250/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "34fe183547d601f50e728fc71af6be3aeb34fbc0e3607e8a84851ae33a5144e3",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "embspatial_balanced1200",
+        "dataset_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "420a54b9bd9a275da2f089cb27f5440926f58f78ac1459e3e6a00cffae563426",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_embspatial1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/embspatial1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "26719c74ac8f3c387fcbfed949c9bdca1a29b9839a3131be589e6a9a7fce0e0a",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_pretrain_cvbench_pairwise1250_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/cvbench_pairwise1250/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_pretrain_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "cc067f96f7ede646c75882dd061b6ac0cf916b69363fea44bde1db997b3288cd",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "embspatial_balanced1200",
+        "dataset_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "420a54b9bd9a275da2f089cb27f5440926f58f78ac1459e3e6a00cffae563426",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_pretrain_embspatial1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/embspatial1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_pretrain_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "66d304d4c471b42f4f29947f825afa4c2406cb9ab086dd4d1d812704220be524",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_pretrain_spatialtunnel1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/spatialtunnel1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_pretrain_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "cbed8e78af54435f9cc081a9f414afe0e35cd2cdaace51eec1026b41b0c603a5",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_molmoact2_spatialtunnel1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/spatialtunnel1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_molmoact2_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "492091068dc183d423d4b2b6f3466ebbb6bb6b9c228b17299301a18c4155df22",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen35_4b_cvbench_pairwise1250_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/cvbench_pairwise1250/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen35_4b_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "ac446e41159fce9289a00cbfe3cea5aba97a454c2beaa995ffe68057ba114b5b",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "embspatial_balanced1200",
+        "dataset_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "420a54b9bd9a275da2f089cb27f5440926f58f78ac1459e3e6a00cffae563426",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen35_4b_embspatial1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/embspatial1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen35_4b_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "9981b0e79fc53fe7220bbbb4b0191f5220e049d18685ca93dfccf47d64b334d8",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen35_4b_spatialtunnel1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/spatialtunnel1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen35_4b_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "eb4fa62912d31d2bdc98b3014ec50f7de7c6848158c7f93251f514d280933bf3",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "coco_construction",
+        "dataset_source": "data/processed/coco_train2017_mask_depth_train6000_v2",
+        "expected_dataset_fingerprint": "791b648a6de673eab146f7aa20874eef48410accefe93b126d659d8729998d5b",
+        "expected_sample_count": 6000,
+        "parent_dataset": null,
+        "split": "train"
+      },
+      "id": "benchmarks/direct_qwen36_27b_coco_train6000_no_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_coco_train6000_no_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_coco_train6000_no_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "9cc5586e2bbbda58db106b3c714c989b823a8cd725d9be01ba877bb4a05e097b",
+      "suites": [
+        "coco-direct",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "coco_construction",
+        "dataset_source": "data/processed/coco_train2017_mask_depth_train6000_v2",
+        "expected_dataset_fingerprint": "791b648a6de673eab146f7aa20874eef48410accefe93b126d659d8729998d5b",
+        "expected_sample_count": 6000,
+        "parent_dataset": null,
+        "split": "train"
+      },
+      "id": "benchmarks/direct_qwen36_27b_coco_train6000_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_coco_train6000_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_coco_train6000_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": true
+      },
+      "runner": "direct_generation",
+      "sha256": "e91080a746833266ce2c42c9f29de922ec21ce3d86deb79605dbb32365011d45",
+      "suites": [
+        "coco-direct",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "coco_construction",
+        "dataset_source": "data/processed/coco_train2017_mask_depth_validation1800_v2",
+        "expected_dataset_fingerprint": "196d48795c3e039c73785a3ce8f46ae10fab041dc70b9c44bfba91b199c8b311",
+        "expected_sample_count": 1800,
+        "parent_dataset": "data/processed/coco_train2017_mask_depth_train6000_v2",
+        "split": "validation"
+      },
+      "id": "benchmarks/direct_qwen36_27b_coco_validation1800_no_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_coco_validation1800_no_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_coco_validation1800_no_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "23034087d839996076c8ec12320222c31270895fe3373cad85f473ac8a2442d2",
+      "suites": [
+        "coco-direct",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "coco_construction",
+        "dataset_source": "data/processed/coco_train2017_mask_depth_validation1800_v2",
+        "expected_dataset_fingerprint": "196d48795c3e039c73785a3ce8f46ae10fab041dc70b9c44bfba91b199c8b311",
+        "expected_sample_count": 1800,
+        "parent_dataset": "data/processed/coco_train2017_mask_depth_train6000_v2",
+        "split": "validation"
+      },
+      "id": "benchmarks/direct_qwen36_27b_coco_validation1800_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_coco_validation1800_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_coco_validation1800_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": true
+      },
+      "runner": "direct_generation",
+      "sha256": "21cd13187e4a2418c0387cafe23ae34e75f9a493da83eda80f0130d38522deff",
+      "suites": [
+        "coco-direct",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_cvbench_pairwise1250_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/cvbench_pairwise1250/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "e01d48891c5d5be3004f23ee698e9474dae8c9b2f07776fb0f333a152b58385e",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_cvbench_pairwise1250_no_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_cvbench_pairwise1250_no_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_cvbench_pairwise1250_no_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "f59d20d08ee90b909440f59ec77df4df951a4bcd3575c2d621b77c50d41883b8",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "cvbench_pairwise",
+        "dataset_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "14e583abd981d12a4a0525e671d6365026dfc5b5161d7b2dceef6b7ad128e5eb",
+        "expected_sample_count": 1250,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_cvbench_pairwise1250_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_cvbench_pairwise1250_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_cvbench_pairwise1250_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": true
+      },
+      "runner": "direct_generation",
+      "sha256": "7881d09ad4ae0138469d092dbfeb00e01938cd6dbdfb77dad9d5eda6dcdd1ff0",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "embspatial_balanced1200",
+        "dataset_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "420a54b9bd9a275da2f089cb27f5440926f58f78ac1459e3e6a00cffae563426",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_embspatial1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/embspatial1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "3b3190ac3c47b17c93dd40a3bdc5e4c824f909f36963e8563669a658346cfa18",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_spatialtunnel1200_coco1800_margin",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/spatialtunnel1200/direct",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "12fc19ede8af8fb7447a48bc444ea38c351a4e172bfa7076e189a6fde441031a",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_spatialtunnel1200_no_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_spatialtunnel1200_no_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_spatialtunnel1200_no_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": false
+      },
+      "runner": "direct_generation",
+      "sha256": "4831f1b1900912e992073555c9daf2499051736a9df6a579655bfb07b6279921",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "dataset_adapter": "spatialtunnel",
+        "dataset_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "2a578cfe169a56d155af708a74406db5ffbc5edefd007a99e88aedd848b135cf",
+        "expected_sample_count": 1200,
+        "parent_dataset": null,
+        "split": "test"
+      },
+      "id": "benchmarks/direct_qwen36_27b_spatialtunnel1200_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_direct_generation/qwen36_27b_spatialtunnel1200_thinking_greedy32k_v1",
+      "output_meaning": "generated answers and direct accuracy after deterministic merge",
+      "path": "configs/experiments/benchmarks/direct_qwen36_27b_spatialtunnel1200_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "prompt_style": "baseline",
+        "thinking": true
+      },
+      "runner": "direct_generation",
+      "sha256": "a3a74eb0b724ae19fd04dd9e0a790edd1d29aaafad82b9573224f2b752be7bc1",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "direct"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "cvbench_pairwise",
+        "benchmark_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "7b7081332976a55f01502a133b0ea213ce6afb3bc4ecac791411b6a2983e051f"
+      },
+      "id": "benchmarks/eval_molmo2_er_cvbench_pairwise1250_coco1800_margin",
+      "layer": {
+        "layer_id": 22
+      },
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/cvbench_pairwise1250/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmo2_er_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "00112ceb484c270040a483ae9686db64c31bdb60270b44892d73e05a748280b1",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "embspatial_balanced1200",
+        "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c"
+      },
+      "id": "benchmarks/eval_molmo2_er_embspatial1200_coco1800_margin",
+      "layer": {
+        "layer_id": 22
+      },
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/embspatial1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmo2_er_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "f7b12ea361412fbcacf3e8951d1a3c152e1fc97a338966ca7a695cdf198324e8",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "spatialtunnel",
+        "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827"
+      },
+      "id": "benchmarks/eval_molmo2_er_spatialtunnel1200_coco1800_margin",
+      "layer": {
+        "layer_id": 22
+      },
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmo2_er/spatialtunnel1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmo2_er_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "566f5bf28f67f7e06bf0cd343670e0a1cb13bf08f873032ee7c6a9135e3b7cd4",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "cvbench_pairwise",
+        "benchmark_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "7b7081332976a55f01502a133b0ea213ce6afb3bc4ecac791411b6a2983e051f"
+      },
+      "id": "benchmarks/eval_molmoact2_cvbench_pairwise1250_coco1800_margin",
+      "layer": {
+        "layer_id": 19
+      },
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/cvbench_pairwise1250/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "15a177b3d19f97719378e1697f616509554f7f2310457544c8e50e4c00790c7d",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "embspatial_balanced1200",
+        "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c"
+      },
+      "id": "benchmarks/eval_molmoact2_embspatial1200_coco1800_margin",
+      "layer": {
+        "layer_id": 19
+      },
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/embspatial1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "6bdae07e011929c4ea9246adc10e98ff783ebcd6986f1cf5927dc5cd07acf53d",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "cvbench_pairwise",
+        "benchmark_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "7b7081332976a55f01502a133b0ea213ce6afb3bc4ecac791411b6a2983e051f"
+      },
+      "id": "benchmarks/eval_molmoact2_pretrain_cvbench_pairwise1250_coco1800_margin",
+      "layer": {
+        "layer_id": 18
+      },
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/cvbench_pairwise1250/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_pretrain_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "40d026edc76cd7f467dbeba1d5134e20c9320aa8fdb3620478fff04ce481ed46",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "embspatial_balanced1200",
+        "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c"
+      },
+      "id": "benchmarks/eval_molmoact2_pretrain_embspatial1200_coco1800_margin",
+      "layer": {
+        "layer_id": 18
+      },
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/embspatial1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_pretrain_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "40b25bfaa26a492181f547d620cc0c98cf93f81ceafd5c0dbb10ae629bb93a7c",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "spatialtunnel",
+        "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827"
+      },
+      "id": "benchmarks/eval_molmoact2_pretrain_spatialtunnel1200_coco1800_margin",
+      "layer": {
+        "layer_id": 18
+      },
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2_pretrain/spatialtunnel1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_pretrain_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "9ccaab2a5b21f5397d02cb908929e0b270df4952c1d34eb42bc8ac36cbb5cc99",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "spatialtunnel",
+        "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827"
+      },
+      "id": "benchmarks/eval_molmoact2_spatialtunnel1200_coco1800_margin",
+      "layer": {
+        "layer_id": 19
+      },
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_zero_shot_coco1800/molmoact2/spatialtunnel1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_molmoact2_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "63b46e563e0c94a34af1cbc0412a99ae4dd247f23cf384d0413e43d21f8f86fe",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "cvbench_pairwise",
+        "benchmark_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "7b7081332976a55f01502a133b0ea213ce6afb3bc4ecac791411b6a2983e051f"
+      },
+      "id": "benchmarks/eval_qwen35_4b_cvbench_pairwise1250_coco1800_margin",
+      "layer": {
+        "layer_id": 15
+      },
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/cvbench_pairwise1250/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen35_4b_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "e8e25bf16a10b9762be60ce1668c484fd065d11ac4c2564aaad93a74a9e35737",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "embspatial_balanced1200",
+        "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c"
+      },
+      "id": "benchmarks/eval_qwen35_4b_embspatial1200_coco1800_margin",
+      "layer": {
+        "layer_id": 15
+      },
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/embspatial1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen35_4b_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "03656d74b3e7e753cf91a6dd679e76e8b815c0cf256852525138e8696b395002",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "spatialtunnel",
+        "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827"
+      },
+      "id": "benchmarks/eval_qwen35_4b_spatialtunnel1200_coco1800_margin",
+      "layer": {
+        "layer_id": 15
+      },
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen35_4b/spatialtunnel1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen35_4b_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "02abda41e52727bd04f013043110eea7cbc0ecee728de92637895efca0aae41b",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "cvbench_pairwise",
+        "benchmark_source": ".cache/assets/datasets/cvbench",
+        "expected_dataset_fingerprint": "7b7081332976a55f01502a133b0ea213ce6afb3bc4ecac791411b6a2983e051f"
+      },
+      "id": "benchmarks/eval_qwen36_27b_cvbench_pairwise1250_coco1800_margin",
+      "layer": {
+        "layer_id": 43
+      },
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/cvbench_pairwise1250/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen36_27b_cvbench_pairwise1250_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "2353b9247b94cd44d12ac828606cf1c870e61ea5b07a12116049c9a6fbbe8e5a",
+      "suites": [
+        "benchmarks-generalization",
+        "cvbench",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "embspatial_balanced1200",
+        "benchmark_source": "data/processed/qa_embspatial.sqlite3",
+        "expected_dataset_fingerprint": "c996c051192043e6e87cef151aa3c8c51c89ab6ffdcffe31226d1fb12ef05f5c"
+      },
+      "id": "benchmarks/eval_qwen36_27b_embspatial1200_coco1800_margin",
+      "layer": {
+        "layer_id": 43
+      },
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/embspatial1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen36_27b_embspatial1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "83aecfb0e2a63277a7b8590617cc32dba47a002b26dadea517fa15fcd0684c1e",
+      "suites": [
+        "benchmarks-generalization",
+        "embspatial",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "benchmark": "spatialtunnel",
+        "benchmark_source": ".cache/assets/datasets/spatialtunnel/contrastive_probing.parquet",
+        "expected_dataset_fingerprint": "8ce35808f6f9c640fcab55639f92667c980212fc0cb5f9435251890f78070827"
+      },
+      "id": "benchmarks/eval_qwen36_27b_spatialtunnel1200_coco1800_margin",
+      "layer": {
+        "layer_id": 43
+      },
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_zero_shot_coco1800/qwen36_27b/spatialtunnel1200/projection",
+      "output_meaning": "fixed-layer directed margins, endpoint predictions, and accuracy",
+      "path": "configs/experiments/benchmarks/eval_qwen36_27b_spatialtunnel1200_coco1800_margin.json",
+      "protocol": {
+        "decision_protocol": "margin_sign_v1",
+        "prompt_style": "baseline"
+      },
+      "runner": "pairwise_projection",
+      "sha256": "4950fa1ca27cea65078853e34ff37bdda0a0bdf1fc20f0b7f7e75e9423c9335b",
+      "suites": [
+        "benchmarks-generalization",
+        "spatialtunnel",
+        "projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "dataset_dir": "data/processed/hstar_hos600",
+        "expected_dataset_fingerprint": "583eabe534aba484f2aa55a8e7cbf074ececd3551e8d6da27c7422cd3f30e5a3",
+        "expected_sample_count": 600
+      },
+      "id": "multi_view/eval_molmo2_er_hstar_hos600_multiview",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_multiview/hstar_hos600_v1_causal_layerwise/molmo2_er",
+      "output_meaning": "layerwise BA-minus-AB projections and endpoint accuracy",
+      "path": "configs/experiments/multi_view/eval_molmo2_er_hstar_hos600_multiview.json",
+      "protocol": {
+        "projection_protocol": "layerwise_single_object_delta_v1",
+        "prompt_protocol": "hstar_hos600_view1_prefix_order_swap_v1"
+      },
+      "runner": "hstar_multiview",
+      "sha256": "da0db981fc4e1bc70faaa7fee4625c7a599781f95a79e2da76a7497a1aa5b52b",
+      "suites": [
+        "multi-view-generalization",
+        "hstar"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "dataset_dir": "data/processed/hstar_hos600",
+        "expected_dataset_fingerprint": "583eabe534aba484f2aa55a8e7cbf074ececd3551e8d6da27c7422cd3f30e5a3",
+        "expected_sample_count": 600
+      },
+      "id": "multi_view/eval_molmoact2_hstar_hos600_multiview",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_multiview/hstar_hos600_v1_causal_layerwise/molmoact2",
+      "output_meaning": "layerwise BA-minus-AB projections and endpoint accuracy",
+      "path": "configs/experiments/multi_view/eval_molmoact2_hstar_hos600_multiview.json",
+      "protocol": {
+        "projection_protocol": "layerwise_single_object_delta_v1",
+        "prompt_protocol": "hstar_hos600_view1_prefix_order_swap_v1"
+      },
+      "runner": "hstar_multiview",
+      "sha256": "e6c8439d88eb4582061fc7576955f3852e44c7430c5e20fe7f3024c3d59f12f3",
+      "suites": [
+        "multi-view-generalization",
+        "hstar"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "dataset_dir": "data/processed/hstar_hos600",
+        "expected_dataset_fingerprint": "583eabe534aba484f2aa55a8e7cbf074ececd3551e8d6da27c7422cd3f30e5a3",
+        "expected_sample_count": 600
+      },
+      "id": "multi_view/eval_molmoact2_pretrain_hstar_hos600_multiview",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_multiview/hstar_hos600_v1_causal_layerwise/molmoact2_pretrain",
+      "output_meaning": "layerwise BA-minus-AB projections and endpoint accuracy",
+      "path": "configs/experiments/multi_view/eval_molmoact2_pretrain_hstar_hos600_multiview.json",
+      "protocol": {
+        "projection_protocol": "layerwise_single_object_delta_v1",
+        "prompt_protocol": "hstar_hos600_view1_prefix_order_swap_v1"
+      },
+      "runner": "hstar_multiview",
+      "sha256": "5357f922e17ef2431ddf0262a166197417af82a2f99fcfd47ab5eeb8b4f5cfc7",
+      "suites": [
+        "multi-view-generalization",
+        "hstar"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "dataset_dir": "data/processed/hstar_hos600",
+        "expected_dataset_fingerprint": "583eabe534aba484f2aa55a8e7cbf074ececd3551e8d6da27c7422cd3f30e5a3",
+        "expected_sample_count": 600
+      },
+      "id": "multi_view/eval_qwen35_4b_hstar_hos600_multiview",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_multiview/hstar_hos600_v1_causal_layerwise/qwen35_4b",
+      "output_meaning": "layerwise BA-minus-AB projections and endpoint accuracy",
+      "path": "configs/experiments/multi_view/eval_qwen35_4b_hstar_hos600_multiview.json",
+      "protocol": {
+        "projection_protocol": "layerwise_single_object_delta_v1",
+        "prompt_protocol": "hstar_hos600_view1_prefix_order_swap_v1"
+      },
+      "runner": "hstar_multiview",
+      "sha256": "f23b5ed8793783f66b688160bce2a87bd8d5d35ff760d22a94dbb58a98c23cc0",
+      "suites": [
+        "multi-view-generalization",
+        "hstar"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2"
+      },
+      "data": {
+        "dataset_dir": "data/processed/hstar_hos600",
+        "expected_dataset_fingerprint": "583eabe534aba484f2aa55a8e7cbf074ececd3551e8d6da27c7422cd3f30e5a3",
+        "expected_sample_count": 600
+      },
+      "id": "multi_view/eval_qwen36_27b_hstar_hos600_multiview",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_multiview/hstar_hos600_v1_causal_layerwise/qwen36_27b",
+      "output_meaning": "layerwise BA-minus-AB projections and endpoint accuracy",
+      "path": "configs/experiments/multi_view/eval_qwen36_27b_hstar_hos600_multiview.json",
+      "protocol": {
+        "projection_protocol": "layerwise_single_object_delta_v1",
+        "prompt_protocol": "hstar_hos600_view1_prefix_order_swap_v1"
+      },
+      "runner": "hstar_multiview",
+      "sha256": "31058a109be1df0bbefed8e946c77f9fd01e89c1eb42be573df1c99fa7c5446d",
+      "suites": [
+        "multi-view-generalization",
+        "hstar"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/color_molmo2_er",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": null,
+      "output_dir": "outputs/prompt/color/molmo2_er",
+      "output_meaning": "color-prompt control margins and accuracy",
+      "path": "configs/experiments/prompt/color_molmo2_er.json",
+      "protocol": {},
+      "runner": "prompt_color",
+      "sha256": "9ddaff74b6b43eb5ea4f5f308b08bac927b41b28de8633f0d5bf34817593c437",
+      "suites": [
+        "prompt-generalization",
+        "prompt-color"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/color_molmoact2",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": null,
+      "output_dir": "outputs/prompt/color/molmoact2",
+      "output_meaning": "color-prompt control margins and accuracy",
+      "path": "configs/experiments/prompt/color_molmoact2.json",
+      "protocol": {},
+      "runner": "prompt_color",
+      "sha256": "f0db60d35e521606bdaf0671c2bf2f6474f4cd32c79142c59fc74b5eb2a0a111",
+      "suites": [
+        "prompt-generalization",
+        "prompt-color"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/color_molmoact2_pretrain",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": null,
+      "output_dir": "outputs/prompt/color/molmoact2_pretrain",
+      "output_meaning": "color-prompt control margins and accuracy",
+      "path": "configs/experiments/prompt/color_molmoact2_pretrain.json",
+      "protocol": {},
+      "runner": "prompt_color",
+      "sha256": "8bc22078cc40b64f661531a0348f6a197f1765c87612231c0ec88dbc0adfa648",
+      "suites": [
+        "prompt-generalization",
+        "prompt-color"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/color_qwen35_4b",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": null,
+      "output_dir": "outputs/prompt/color/qwen35_4b",
+      "output_meaning": "color-prompt control margins and accuracy",
+      "path": "configs/experiments/prompt/color_qwen35_4b.json",
+      "protocol": {},
+      "runner": "prompt_color",
+      "sha256": "d6bca42608af67d28413a2bc2b52015222f0867f0e2af5e13728cabac66b529f",
+      "suites": [
+        "prompt-generalization",
+        "prompt-color"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/color_qwen36_27b",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": null,
+      "output_dir": "outputs/prompt/color/qwen36_27b",
+      "output_meaning": "color-prompt control margins and accuracy",
+      "path": "configs/experiments/prompt/color_qwen36_27b.json",
+      "protocol": {},
+      "runner": "prompt_color",
+      "sha256": "cc307edecea91e0eac35f2411abd221bd730b8d9f245387bd38cd3b7f100a0c9",
+      "suites": [
+        "prompt-generalization",
+        "prompt-color"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/where_molmo2_er",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": null,
+      "output_dir": "outputs/prompt/where/molmo2_er",
+      "output_meaning": "where-prompt sweep margins and accuracy",
+      "path": "configs/experiments/prompt/where_molmo2_er.json",
+      "protocol": {},
+      "runner": "prompt_where",
+      "sha256": "51a5f108db6da55865d54d7e4b89bddec4da299c04dd9accc1aa0bc2c3be54f3",
+      "suites": [
+        "prompt-generalization",
+        "prompt-where"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/where_molmoact2",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": null,
+      "output_dir": "outputs/prompt/where/molmoact2",
+      "output_meaning": "where-prompt sweep margins and accuracy",
+      "path": "configs/experiments/prompt/where_molmoact2.json",
+      "protocol": {},
+      "runner": "prompt_where",
+      "sha256": "16bd255f5db22bf89b2d379f13be9ef07d560ac1c7f3313d6a959ba16a3b3e00",
+      "suites": [
+        "prompt-generalization",
+        "prompt-where"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/where_molmoact2_pretrain",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": null,
+      "output_dir": "outputs/prompt/where/molmoact2_pretrain",
+      "output_meaning": "where-prompt sweep margins and accuracy",
+      "path": "configs/experiments/prompt/where_molmoact2_pretrain.json",
+      "protocol": {},
+      "runner": "prompt_where",
+      "sha256": "621a769400df6e505252646424bbc6866bfb44094cfdc3e3be202b1cab2ae9e3",
+      "suites": [
+        "prompt-generalization",
+        "prompt-where"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/where_qwen35_4b",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": null,
+      "output_dir": "outputs/prompt/where/qwen35_4b",
+      "output_meaning": "where-prompt sweep margins and accuracy",
+      "path": "configs/experiments/prompt/where_qwen35_4b.json",
+      "protocol": {},
+      "runner": "prompt_where",
+      "sha256": "86cbad03a5cafbade786f49274cbe93caf7a2828476aba5fbefa03f0ae31bb70",
+      "suites": [
+        "prompt-generalization",
+        "prompt-where"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {},
+      "id": "prompt/where_qwen36_27b",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": null,
+      "output_dir": "outputs/prompt/where/qwen36_27b",
+      "output_meaning": "where-prompt sweep margins and accuracy",
+      "path": "configs/experiments/prompt/where_qwen36_27b.json",
+      "protocol": {},
+      "runner": "prompt_where",
+      "sha256": "b54c1f998657d6eb5e92173f7091a65d135b72b87b1dec00538d4ed4a71ff111",
+      "suites": [
+        "prompt-generalization",
+        "prompt-where"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmo2_er_spinbench_with_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_spinbench_direct/molmo2_er_with_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmo2_er_spinbench_with_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "with",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "5160899de2b8521373d4d026fa9df37f502f67ac3630d8ef4e350a865586e0b9",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmo2_er_spinbench_without_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_spinbench_direct/molmo2_er_without_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmo2_er_spinbench_without_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "without",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "4777f64d6d4baf38ad9d5923540b572edb83fdca45c1aacdb5de2862e785e4a7",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmoact2_pretrain_spinbench_with_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_spinbench_direct/molmoact2_pretrain_with_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmoact2_pretrain_spinbench_with_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "with",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "27264cf1353ee660098b2069cac8324a60a043d1de45d717d9f5cf67a45439f4",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmoact2_pretrain_spinbench_without_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_spinbench_direct/molmoact2_pretrain_without_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmoact2_pretrain_spinbench_without_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "without",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "41e2f5926aee8e4edbe8359bb32a0a6c2404f1363ce2d34c1f921e3eed917725",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmoact2_spinbench_with_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_spinbench_direct/molmoact2_with_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmoact2_spinbench_with_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "with",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "334d8d95398ab7459a88d99f10c1197152afe5cd1b1a32b2650b5167f6c4f02a",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_molmoact2_spinbench_without_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_spinbench_direct/molmoact2_without_premise_no_thinking_greedy128_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_molmoact2_spinbench_without_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "without",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "5924a1c4fe528c8f8f2c154ea0facc0e54587e738d42b62dce68f4735e600648",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen35_4b_spinbench_with_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_direct/qwen35_4b_spinbench_with_premise_no_thinking_greedy128",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen35_4b_spinbench_with_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "with",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "37323edacbe8ac88832b54487f35075c0ed7b8591cc66c712b28b96c65ab72c3",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen35_4b_spinbench_with_premise_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_direct/qwen35_4b_spinbench_with_premise_thinking_greedy32k_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen35_4b_spinbench_with_premise_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_thinking_toggle_v2",
+        "max_new_tokens": 32768,
+        "premise_mode": "with",
+        "thinking": true
+      },
+      "runner": "spinbench_direct",
+      "sha256": "756b185e681baa40b3ab8076595bc56b7bf4d9784100b25b80e731bccaa7be35",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen35_4b_spinbench_without_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_direct/qwen35_4b_spinbench_without_premise_no_thinking_greedy128",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen35_4b_spinbench_without_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "without",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "e84fff1cfa69083a7f3127a3514d08e7378dce5e2fbd7f2aab97cfc2d12150bd",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen35_4b_spinbench_without_premise_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_direct/qwen35_4b_spinbench_without_premise_thinking_greedy32k_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen35_4b_spinbench_without_premise_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_thinking_toggle_v2",
+        "max_new_tokens": 32768,
+        "premise_mode": "without",
+        "thinking": true
+      },
+      "runner": "spinbench_direct",
+      "sha256": "98934cbd3af2f5c58546c581dbdba8a8b29797c9ac88461638e7ff44c94fadd1",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen36_27b_spinbench_with_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_direct/qwen36_27b_with_premise_no_thinking_greedy128",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen36_27b_spinbench_with_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "with",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "9142dca5f130134b168be76f9c5ae8fa8654aac98abfb0219434d9b58dcae0b7",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen36_27b_spinbench_with_premise_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_direct/qwen36_27b_with_premise_thinking_greedy32k_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen36_27b_spinbench_with_premise_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "premise_mode": "with",
+        "thinking": true
+      },
+      "runner": "spinbench_direct",
+      "sha256": "a9d8cf4876973d7ef4d5ae7df39ff44708d8dd24c00d751ac5d109d0488f2402",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen36_27b_spinbench_without_premise_no_thinking_greedy128",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_direct/qwen36_27b_without_premise_no_thinking_greedy128",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen36_27b_spinbench_without_premise_no_thinking_greedy128.json",
+      "protocol": {
+        "decoding_protocol": "greedy_128_no_thinking_v1",
+        "max_new_tokens": 128,
+        "premise_mode": "without",
+        "thinking": false
+      },
+      "runner": "spinbench_direct",
+      "sha256": "417ef75541ca45dc8a5140d52a7f5e3f5a784f4d1507c0c40da8b245326b84df",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {},
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/direct_qwen36_27b_spinbench_without_premise_thinking_greedy32k",
+      "layer": {},
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_direct/qwen36_27b_without_premise_thinking_greedy32k_v1",
+      "output_meaning": "direct A/B answers and accuracy by premise condition",
+      "path": "configs/experiments/spinbench/direct_qwen36_27b_spinbench_without_premise_thinking_greedy32k.json",
+      "protocol": {
+        "decoding_protocol": "greedy_32k_no_thinking_budget_v1",
+        "max_new_tokens": 32768,
+        "premise_mode": "without",
+        "thinking": true
+      },
+      "runner": "spinbench_direct",
+      "sha256": "0f782767567f812726c1dd8b44272cca902f38d1b0c0a393c0c1b7779d8b4b5f",
+      "suites": [
+        "spinbench",
+        "spinbench-direct"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmo2_er_spinbench_with_premise_rotation",
+      "layer": {
+        "selected_layer": 22
+      },
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_spinbench_projection/molmo2_er_with_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmo2_er_spinbench_with_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "with",
+        "probe_context": "official_source_premise",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "c85450604ce49beabe4d822a7dd3f6d19ecd5fcb56fc7b6e588dfa6ffaeab8b5",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmo2_er_spinbench_without_premise_rotation",
+      "layer": {
+        "selected_layer": 22
+      },
+      "model_adapter": "molmo2_er",
+      "model_path": ".cache/assets/models/molmo2_er",
+      "output_dir": "outputs/release_spinbench_projection/molmo2_er_without_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmo2_er_spinbench_without_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "without",
+        "probe_context": "none",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "f99e97e39afcaf9d73da764e81262a917e49ea642f5ecc5b865bb0438163bdbb",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmoact2_pretrain_spinbench_with_premise_rotation",
+      "layer": {
+        "selected_layer": 18
+      },
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_spinbench_projection/molmoact2_pretrain_coco1800_l18_with_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmoact2_pretrain_spinbench_with_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "with",
+        "probe_context": "official_source_premise",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "53ef60a73982169bc5929f84d17e110c9393b5f04c7b5f4fc29f9e4e43992e8c",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmoact2_pretrain_spinbench_without_premise_rotation",
+      "layer": {
+        "selected_layer": 18
+      },
+      "model_adapter": "molmoact2_pretrain",
+      "model_path": ".cache/assets/models/molmoact2_pretrain",
+      "output_dir": "outputs/release_spinbench_projection/molmoact2_pretrain_coco1800_l18_without_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmoact2_pretrain_spinbench_without_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "without",
+        "probe_context": "none",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "4239f199849036aac88ac6b1ddf69bd66b58fa09203874b31af7da67bc5fab54",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmoact2_spinbench_with_premise_rotation",
+      "layer": {
+        "selected_layer": 19
+      },
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_spinbench_projection/molmoact2_coco1800_l19_with_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmoact2_spinbench_with_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "with",
+        "probe_context": "official_source_premise",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "ec0c75351a754747bf443d20b3ecc47a17f6b92bc790ab9a91b77dc6fa594de9",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_molmoact2_spinbench_without_premise_rotation",
+      "layer": {
+        "selected_layer": 19
+      },
+      "model_adapter": "molmoact2",
+      "model_path": ".cache/assets/models/molmoact2",
+      "output_dir": "outputs/release_spinbench_projection/molmoact2_coco1800_l19_without_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_molmoact2_spinbench_without_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "without",
+        "probe_context": "none",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "9960b8f804dfdbe47634e8039e572d6c4f10a97fc0efb5efda908852a2763a9a",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_qwen35_4b_spinbench_with_premise_rotation",
+      "layer": {
+        "selected_layer": 15
+      },
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_projection/qwen35_4b_with_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_qwen35_4b_spinbench_with_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "with",
+        "probe_context": "official_source_premise",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "786c7639e550929a7b7ca6e30ac5c6f19c87ada6488ca0a39f40eea0773d96cd",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen35_4b_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_qwen35_4b_spinbench_without_premise_rotation",
+      "layer": {
+        "selected_layer": 15
+      },
+      "model_adapter": "qwen35_4b",
+      "model_path": ".cache/assets/models/qwen35_4b",
+      "output_dir": "outputs/release_spinbench_projection/qwen35_4b_without_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_qwen35_4b_spinbench_without_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "without",
+        "probe_context": "none",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "277dfdd8cd05b7beb7b0a5cc2f1693feaf377cce4de261f062f83ea01dec5b96",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "d0498243277c1f880aeb34b673d483aa5782e34e372e48ae3c3ee0dfe5d94684",
+        "expected_sample_count": 144,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_qwen36_27b_spinbench_with_premise_rotation",
+      "layer": {
+        "selected_layer": 43
+      },
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_projection/qwen36_27b_with_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_qwen36_27b_spinbench_with_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "with",
+        "probe_context": "official_source_premise",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "c202640031bdfcbe59c2097ab7358567c8e2c5b10277b06c34f81a41399078c2",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    },
+    {
+      "artifact": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/qwen36_27b_coco6000_final_logit_axes_v2",
+        "readout_selection_manifest": null
+      },
+      "data": {
+        "annotation_path": ".cache/assets/datasets/spinbench/test.jsonl",
+        "annotation_sha256": "0315f4e5723a33ce24138055051c6b5ceb90ded66b37e850e258ded0553059d2",
+        "expected_dataset_fingerprint": "017dc0ec73271ac4384639202ac258d8b779295d3e95b103583ad7a0a4438fec",
+        "expected_sample_count": 146,
+        "image_root": ".cache/assets/datasets/spinbench"
+      },
+      "id": "spinbench/eval_qwen36_27b_spinbench_without_premise_rotation",
+      "layer": {
+        "selected_layer": 43
+      },
+      "model_adapter": "qwen36_27b",
+      "model_path": ".cache/assets/models/qwen36_27b",
+      "output_dir": "outputs/release_spinbench_projection/qwen36_27b_without_premise_rotation_v1",
+      "output_meaning": "camera-rotated S-Space margins and A/B accuracy",
+      "path": "configs/experiments/spinbench/eval_qwen36_27b_spinbench_without_premise_rotation.json",
+      "protocol": {
+        "premise_mode": "without",
+        "probe_context": "none",
+        "projection_protocol": "selected_layer_margin_rotation_matrix_v1",
+        "prompt_style": "baseline",
+        "readout_selection_protocol": "coco1800_margin_selected_layer_v1"
+      },
+      "runner": "spinbench_projection",
+      "sha256": "6288492c35a9fde5c6313504504c0475f019b84d88e862b9c1dde8f4201bd436",
+      "suites": [
+        "spinbench",
+        "spinbench-projection"
+      ]
+    }
+  ],
+  "runner_modules": {
+    "direct_generation": {
+      "merge": "sspace.experiments.common.direct.merge_cli",
+      "worker": "sspace.experiments.common.direct.cli"
+    },
+    "hstar_multiview": "sspace.experiments.multi_view.hstar.hstar_cli",
+    "pairwise_projection": "sspace.experiments.common.pairwise.projection_cli",
+    "prompt_color": "sspace.experiments.prompt.color.run_sweep",
+    "prompt_where": "sspace.experiments.prompt.where.run_sweep",
+    "spinbench_direct": "sspace.experiments.spinbench.perspective_taking.direct_cli",
+    "spinbench_projection": "sspace.experiments.spinbench.perspective_taking.projection_cli"
+  },
+  "schema_version": "1.1.0",
+  "steps": [
+    {
+      "id": "quantitative-plot",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "description": "Plot causal retention, fixed-CoT stages, or premise layer sweeps."
+    },
+    {
+      "id": "mmsi-prepare",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.prepare_mmsi_eightway",
+      "description": "Prepare the exhaustive 191-question geographic-answer MMSI subset."
+    },
+    {
+      "id": "mmsi-extract",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.extract_qwen_mmsi_direction_tokens",
+      "description": "Generate Qwen3.6 reasoning and replay exact direction token IDs at L43."
+    },
+    {
+      "id": "mmsi-plot",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.plot_qwen_mmsi_direction_centroids",
+      "description": "Plot per-token and question-balanced MMSI direction readouts."
+    },
+    {
+      "id": "spinbench-layerwise",
+      "classification": "analysis",
+      "module": "sspace.experiments.spinbench.perspective_taking.tools.run_spinbench_layerwise_sweep",
+      "description": "Sweep matching axes at every layer with and without the premise."
+    },
+    {
+      "id": "spatial-causality",
+      "classification": "analysis",
+      "module": "sspace.experiments.intervention.spatial_causality.cli",
+      "description": "Layer intervention and answer-change analysis; with baseline-relative answer retention."
+    },
+    {
+      "id": "object-lens",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.object_coordinate_lens.cli",
+      "description": "Single-image coordinate extraction CLI; Web UI and HTTP service removed."
+    },
+    {
+      "id": "continuous-coordinates",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.object_coordinates.plot",
+      "description": "Continuous-coordinate affine fits and plots."
+    },
+    {
+      "id": "contextual-run",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.cli",
+      "description": "Model projection for one checksum-bound contextual case manifest."
+    },
+    {
+      "id": "contextual-build",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.build_manifest",
+      "description": "Build a contextual case manifest from a compact specification."
+    },
+    {
+      "id": "contextual-analyze",
+      "classification": "analysis",
+      "module": "sspace.experiments.analysis.contextual_cases.scripts.analyze",
+      "description": "Summarize and plot contextual case records."
+    },
+    {
+      "id": "evolving-cot-extract",
+      "classification": "analysis",
+      "module": "sspace.experiments.spinbench.evolving_cot.scripts.run_qwen36_prefilled_cot_activations",
+      "description": "Gold-conditioned prefilled-CoT activation extraction; for staged readout analysis."
+    },
+    {
+      "id": "evolving-cot-stages",
+      "classification": "analysis",
+      "module": "sspace.experiments.spinbench.evolving_cot.scripts.score_prefilled_spinbench_cot_stages",
+      "description": "Summarize frozen prefilled-CoT stage activations."
+    }
+  ]
+}

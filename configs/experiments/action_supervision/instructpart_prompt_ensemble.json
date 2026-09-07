@@ -1,0 +1,51 @@
+{
+  "classification": "quantitative",
+  "dataset": {
+    "candidate_count": 360,
+    "dataset_root": ".cache/assets/datasets/instructpart_affordance_parts",
+    "expected_selection_sha256": "cb6d668645f7e5bbf40bb34f0ee00af95940141c89fbfee6e9dacf9c13d08c71",
+    "repo_id": "IffYuan/InstructPart",
+    "revision": "bcd06969e32582ceeba3e1841183106027b379fb",
+    "seed": 42,
+    "split": "train"
+  },
+  "evaluation": {
+    "device": "cuda:0",
+    "layers": [17, 18, 19, 20, 21, 22],
+    "models": {
+      "molmo2_er": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmo2_er_coco6000_final_logit_axes_v2",
+        "model_path": ".cache/assets/models/molmo2_er"
+      },
+      "molmoact2": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_coco6000_final_logit_axes_v2",
+        "model_path": ".cache/assets/models/molmoact2"
+      },
+      "molmoact2_pretrain": {
+        "artifact_dir": "sspace/core/artifacts/pretrained/molmoact2_pretrain_coco6000_final_logit_axes_v2",
+        "model_path": ".cache/assets/models/molmoact2_pretrain"
+      }
+    },
+    "output_root": "outputs/action_supervision/instructpart_prompt_ensemble"
+  },
+  "protocol": "instructpart_named_part_prompt_ensemble_10",
+  "pseudo_ground_truth": {
+    "box_threshold": 0.2,
+    "depth_dead_zone": 0.05,
+    "depth_model_path": ".cache/assets/models/depth_anything_v2_small_hf",
+    "depth_weights_sha256": "3152477ce0d8d6978d76b995120de97cb5b928701fd0f817769f59e249a16b70",
+    "expected_filtered_selection_sha256": "0a81e740ae35caee96d8f5ee7ca3eba34495a8f93fdc2f71c569bbe7c4e579ac",
+    "expected_ground_truth_values_sha256": "c0168d376730e167ac629dbddc686adc3f09e3c9f15db7ac94b98eba517eb82e",
+    "expected_object_boxes_sha256": "0741621b7de2eaf10a639ab1198cb66baaa1eaf8d4d6623387c3389102c638f2",
+    "expected_retained_selection_sha256": "75c592e590d5b37f55d0e38915b851e4d774f0b28f9157f5e72769cd10ded174",
+    "grounding_dino_path": ".cache/assets/models/grounding_dino",
+    "grounding_dino_weights_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3",
+    "horizontal_vertical_dead_zone": 0.05,
+    "minimum_part_mask_coverage": 0.8,
+    "retained_count": 300,
+    "slimsam_path": ".cache/assets/models/slimsam_50_uniform",
+    "slimsam_weights_sha256": "c6146291d993f315ae1951e1209555d6c9dea1404546dc54edbc3f15fb1d8e69",
+    "text_threshold": 0.2
+  },
+  "schema_version": "1.0.0"
+}

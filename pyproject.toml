@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "s-space"
+version = "1.0.0"
+description = "Core implementation and experiment workflows for S-Space"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sspace*"]
+
+[tool.setuptools.package-data]
+sspace = ["**/README.md", "**/*.json", "**/*.jsonl", "**/*.csv", "**/*.gz", "**/*.txt", "**/*.safetensors", "**/*.png", "**/*.webp", "**/*.svg", "**/*.ttf", "**/*.sh"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"

@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "condition_images": {
+        "blank": "blank-gray.png",
+        "mirror": "tunnel-offscreen-train-far-mirrored.png",
+        "original": "tunnel-offscreen-train-far.png"
+      },
+      "effect_axis": "distance",
+      "effect_conditions_a": ["blank"],
+      "effect_conditions_b": ["original", "mirror"],
+      "effect_sign": 1,
+      "family": "offscreen_train",
+      "mode": "paired_prompts",
+      "prompts": [
+        "The worker waits for the train beside the tunnel.",
+        "The worker watches the train approach through the tunnel.",
+        "The train approaches the worker through the tunnel.",
+        "The worker signals the train at the tunnel entrance.",
+        "The worker looks down the tracks for the train.",
+        "The worker prepares to receive the train.",
+        "The worker monitors the tracks for the train.",
+        "The worker expects the train to emerge from the tunnel.",
+        "The worker listens for the train in the tunnel.",
+        "The worker tracks the train along the rails.",
+        "The train follows the rails toward the worker.",
+        "The train approaches as the worker waits.",
+        "The train is expected by the worker at the tunnel.",
+        "The train is the focus of the worker's attention.",
+        "The train travels through the tunnel while the worker waits.",
+        "Standing by the tracks, the worker watches for the train.",
+        "Inside the tunnel, the train moves toward the worker.",
+        "During the shift, the worker anticipates the train.",
+        "At the platform, the worker awaits the train.",
+        "Along the railway, the worker watches the train."
+      ],
+      "reference": "worker",
+      "target": "train"
+    }
+  ]
+}

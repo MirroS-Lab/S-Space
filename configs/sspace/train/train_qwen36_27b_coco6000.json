@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.2.0",
+  "run_kind": "full",
+  "model_adapter": "qwen36_27b",
+  "model_path": ".cache/assets/models/qwen36_27b",
+  "model_source": "ModelScope Qwen/Qwen3.6-27B local mirror; all 15 weight shards and tokenizer.json SHA-256 verified against Hugging Face revision 6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "dataset": "data/processed/coco_train2017_mask_depth_train6000_v2",
+  "dataset_fingerprint": "d826f948bc3db36c0cecd965118a6fa96c53ac29d91e7bf84a3b2abc2099fe6f",
+  "validation_dataset": "data/processed/coco_train2017_mask_depth_validation1800_v2",
+  "validation_dataset_fingerprint": "125146e175ddb8f688628caca0e4544e3049bc12a80fca2924d75b192e8b7c3d",
+  "world_size": 1,
+  "train_selection": {"mode": "all", "indices": []},
+  "validation_selection": {"mode": "all", "indices": []},
+  "checkpoint_every": 200,
+  "seed": 42,
+  "output_dir": "outputs/release_training/qwen36_27b_coco6000_final_logit_axes_v2",
+  "artifact_dir": "outputs/release_artifacts/qwen36_27b_coco6000_final_logit_axes_v2",
+  "artifact_id": "qwen36_27b_coco6000_final_logit_axes_v2"
+}

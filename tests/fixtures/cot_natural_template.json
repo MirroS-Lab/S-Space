@@ -1,0 +1,150 @@
+{
+  "source": "qwen36_cot_template_activation_screen_v1/full/records_native_exact_winner.jsonl",
+  "source_sha256": "4ddfb982ae2a47293e03c55582492b2ed2dd455c5c09593369897919426fadf7",
+  "cases": [
+    {
+      "sample_id": "spinbench_1482_206_3",
+      "sample": {
+        "object_a": "master chef can",
+        "object_b": "sugar box",
+        "answer": "B",
+        "source_group": "distance",
+        "target_view": "back",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the back.\n\n1. **Analyze the current view:**\n* In the front view, the sugar box is farther from the front viewer than the master chef can.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the sugar box and the master chef can from the back.\n\n3. **Conclusion:**\n* From this perspective, the sugar box is closer to the viewer than the master chef can."
+    },
+    {
+      "sample_id": "spinbench_1483_227_3",
+      "sample": {
+        "object_a": "mustard bottle",
+        "object_b": "banana",
+        "answer": "A",
+        "source_group": "distance",
+        "target_view": "back",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the back.\n\n1. **Analyze the current view:**\n* In the front view, the mustard bottle is farther from the front viewer than the banana.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the mustard bottle and the banana from the back.\n\n3. **Conclusion:**\n* From this perspective, the mustard bottle is closer to the viewer than the banana."
+    },
+    {
+      "sample_id": "spinbench_1484_209_5",
+      "sample": {
+        "object_a": "pitcher base",
+        "object_b": "mustard bottle",
+        "answer": "A",
+        "source_group": "horizontal",
+        "target_view": "back",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the back.\n\n1. **Analyze the current view:**\n* In the front view, the pitcher base is to the right of the mustard bottle.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the pitcher base and the mustard bottle from the back.\n\n3. **Conclusion:**\n* From this perspective, the pitcher base is to the left of the mustard bottle."
+    },
+    {
+      "sample_id": "spinbench_1487_160_5",
+      "sample": {
+        "object_a": "bowl",
+        "object_b": "wood block",
+        "answer": "B",
+        "source_group": "horizontal",
+        "target_view": "back",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the back.\n\n1. **Analyze the current view:**\n* In the front view, the wood block is to the right of the bowl.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the wood block and the bowl from the back.\n\n3. **Conclusion:**\n* From this perspective, the wood block is to the left of the bowl."
+    },
+    {
+      "sample_id": "spinbench_1518_136_3",
+      "sample": {
+        "object_a": "large marker",
+        "object_b": "large clamp",
+        "answer": "B",
+        "source_group": "distance",
+        "target_view": "left",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the left.\n\n1. **Analyze the current view:**\n* In the front view, the large clamp is farther from the front viewer than the large marker.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the large clamp and the large marker from the left.\n\n3. **Conclusion:**\n* From this perspective, the large clamp is to the left of the large marker."
+    },
+    {
+      "sample_id": "spinbench_1520_164_3",
+      "sample": {
+        "object_a": "power drill",
+        "object_b": "bowl",
+        "answer": "A",
+        "source_group": "distance",
+        "target_view": "left",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the left.\n\n1. **Analyze the current view:**\n* In the front view, the power drill is farther from the front viewer than the bowl.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the power drill and the bowl from the left.\n\n3. **Conclusion:**\n* From this perspective, the power drill is to the left of the bowl."
+    },
+    {
+      "sample_id": "spinbench_1525_226_5",
+      "sample": {
+        "object_a": "mustard bottle",
+        "object_b": "banana",
+        "answer": "A",
+        "source_group": "horizontal",
+        "target_view": "left",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the left.\n\n1. **Analyze the current view:**\n* In the front view, the mustard bottle is to the left of the banana.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the mustard bottle and the banana from the left.\n\n3. **Conclusion:**\n* From this perspective, the mustard bottle is closer to the viewer than the banana."
+    },
+    {
+      "sample_id": "spinbench_1534_163_5",
+      "sample": {
+        "object_a": "power drill",
+        "object_b": "bowl",
+        "answer": "B",
+        "source_group": "horizontal",
+        "target_view": "left",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the left.\n\n1. **Analyze the current view:**\n* In the front view, the bowl is to the left of the power drill.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the bowl and the power drill from the left.\n\n3. **Conclusion:**\n* From this perspective, the bowl is closer to the viewer than the power drill."
+    },
+    {
+      "sample_id": "spinbench_1576_135_3",
+      "sample": {
+        "object_a": "large marker",
+        "object_b": "large clamp",
+        "answer": "A",
+        "source_group": "distance",
+        "target_view": "right",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the right.\n\n1. **Analyze the current view:**\n* In the front view, the large marker is closer to the front viewer than the large clamp.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the large marker and the large clamp from the right.\n\n3. **Conclusion:**\n* From this perspective, the large marker is to the left of the large clamp."
+    },
+    {
+      "sample_id": "spinbench_1577_100_5",
+      "sample": {
+        "object_a": "mustard bottle",
+        "object_b": "rubiks cube",
+        "answer": "B",
+        "source_group": "horizontal",
+        "target_view": "right",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the right.\n\n1. **Analyze the current view:**\n* In the front view, the rubiks cube is to the right of the mustard bottle.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the rubiks cube and the mustard bottle from the right.\n\n3. **Conclusion:**\n* From this perspective, the rubiks cube is closer to the viewer than the mustard bottle."
+    },
+    {
+      "sample_id": "spinbench_1579_208_3",
+      "sample": {
+        "object_a": "master chef can",
+        "object_b": "sugar box",
+        "answer": "B",
+        "source_group": "distance",
+        "target_view": "right",
+        "target_property": "left"
+      },
+      "rationale": "The user wants me to determine which object would appear on the left if the scene were viewed from the right.\n\n1. **Analyze the current view:**\n* In the front view, the sugar box is closer to the front viewer than the master chef can.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the sugar box and the master chef can from the right.\n\n3. **Conclusion:**\n* From this perspective, the sugar box is to the left of the master chef can."
+    },
+    {
+      "sample_id": "spinbench_1580_204_5",
+      "sample": {
+        "object_a": "pudding box",
+        "object_b": "potted meat can",
+        "answer": "A",
+        "source_group": "horizontal",
+        "target_view": "right",
+        "target_property": "closer"
+      },
+      "rationale": "The user wants me to determine which object would be closer to the viewer if the scene were viewed from the right.\n\n1. **Analyze the current view:**\n* In the front view, the pudding box is to the right of the potted meat can.\n\n2. **Imagine the new perspective:**\n* I now imagine viewing the pudding box and the potted meat can from the right.\n\n3. **Conclusion:**\n* From this perspective, the pudding box is closer to the viewer than the potted meat can."
+    }
+  ]
+}

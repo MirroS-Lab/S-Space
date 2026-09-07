@@ -1,0 +1,12 @@
+{
+  "evaluation_id": "where_molmoact2",
+  "model_adapter": "molmoact2",
+  "source_configs": [
+    "configs/experiments/benchmarks/eval_molmoact2_spatialtunnel1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmoact2_embspatial1200_coco1800_margin.json",
+    "configs/experiments/benchmarks/eval_molmoact2_cvbench_pairwise1250_coco1800_margin.json"
+  ],
+  "output_dir": "outputs/prompt/where/molmoact2",
+  "runner": "prompt_where",
+  "suites": ["prompt-generalization", "prompt-where"]
+}

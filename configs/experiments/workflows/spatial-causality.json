@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spatial-causality",
+  "classification": "quantitative",
+  "steps": [
+    {
+      "module": "sspace.experiments.intervention.spatial_causality.cli",
+      "args": [
+        "--layers",
+        "17",
+        "--alpha-values",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "--beta-values",
+        "-30",
+        "-25",
+        "-20",
+        "-15",
+        "-10",
+        "-5",
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "--samples-per-category",
+        "200",
+        "--output-dir",
+        "outputs/reproduction/spatial_causality"
+      ],
+      "model": "molmo2_er"
+    },
+    {
+      "module": "sspace.experiments.analysis.plot_quantitative",
+      "args": [
+        "--protocol",
+        "causality",
+        "--inputs",
+        "outputs/reproduction/spatial_causality/layer_summary.csv",
+        "--output-dir",
+        "outputs/reproduction/spatial_causality/analysis"
+      ],
+      "model": "molmo2_er"
+    }
+  ]
+}

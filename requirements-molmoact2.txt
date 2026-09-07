@@ -1,0 +1,13 @@
+# MolmoAct2 and MolmoAct2-Pretrain (Python 3.11).
+accelerate==1.14.0
+einops==0.8.2
+numpy==2.4.6
+pandas==3.0.5
+pillow==12.3.0
+pycocotools==2.0.10
+pyarrow==20.0.0
+safetensors==0.8.0
+torch==2.13.0
+torchvision==0.28.0
+transformers==5.3.0
+

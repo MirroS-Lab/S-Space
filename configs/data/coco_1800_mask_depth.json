@@ -1,0 +1,14 @@
+{
+  "training_dataset": "data/processed/coco_train2017_mask_depth_train6000_v2",
+  "annotation_path": "datasets/coco2017/annotations/instances_train2017.json",
+  "image_root": "datasets/coco2017/train2017",
+  "depth_model_path": "models/depth_anything_v2_small_hf",
+  "output_dir": "data/processed/coco_train2017_mask_depth_validation1800_v2",
+  "protocol": "coco_validation1800_vertical_dx020_v2",
+  "samples_per_endpoint": 300,
+  "depth_candidate_count": 1400,
+  "depth_confidence": 0.12,
+  "depth_batch_size": 16,
+  "seed": 42,
+  "device": "cuda:0"
+}
