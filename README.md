@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img alt="arXiv: Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white">
+  <a href="https://mirros.ai/report/s-space.pdf"><img alt="arXiv:Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white"></a>
   <a href="https://mirros.ai/blog/s-space"><img alt="Blog" src="https://img.shields.io/badge/MirroS-Blog-745AE8"></a>
   <a href="https://github.com/mirros-lab/s-space"><img alt="Code" src="https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue"></a>
@@ -37,7 +37,7 @@ Code lives in `sspace/`; experiment settings live in `configs/`.
   <a href="https://mirros.ai/blog/s-space"><img src="assets/blog.png" alt="S-Space blog" width="100%"></a>
 </p>
 
-- [2026/09/07] [MirroS Blog](https://mirros.ai/blog/s-space) and [Report]() is live.
+- [2026/09/07] [MirroS Blog](https://mirros.ai/blog/s-space) and [Report](https://mirros.ai/report/s-space.pdf) is live.
 
 
 ## Get Started
