@@ -186,7 +186,7 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 | Component | Projects |
 |---|---|
-| Models | [MolmoAct2](https://github.com/allenai/molmoact2), [Qwen](https://github.com/QwenLM/Qwen3-VL) |
+| Models | [MolmoAct2](https://github.com/allenai/molmoact2), [Qwen](https://github.com/QwenLM/Qwen3.8) |
 | Benchmarks | [SpatialTunnel](https://huggingface.co/datasets/cubec/spatialtunnel), [EmbSpatial-Bench](https://github.com/mengfeidu/EmbSpatial-Bench), [CV-Bench](https://huggingface.co/datasets/nyu-visionx/CV-Bench), [HStar](https://humanoid-vstar.github.io/), [SpinBench](https://huggingface.co/datasets/YuyouZhang/SpinBench) |
 | Training data | [COCO](https://cocodataset.org/) |
 
