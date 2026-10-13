@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://mirros.ai/report/s-space.pdf"><img alt="arXiv:Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white"></a>
+  <a href="https://arxiv.org/abs/2610.13527"><img alt="arXiv:Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white"></a>
   <a href="https://mirros.ai/blog/s-space"><img alt="Blog" src="https://img.shields.io/badge/MirroS-Blog-745AE8"></a>
   <a href="https://github.com/mirros-lab/s-space"><img alt="Code" src="https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue"></a>
